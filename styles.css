@@ -527,11 +527,20 @@ footer {
     border-radius: 5px;
     padding: 5px 10px;
   }
+
+  li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
   
 @media (min-width: 501px) {
     .row {
         display: flex;
+        flex-direction: row;
         gap: 10rem;
+        justify-content: space-between;
+        padding: 1rem;
     }
 }
 
@@ -667,11 +676,6 @@ footer {
         text-align: left;
         align-items: flex-start;
 
-    }
-
-    .row {
-        display: flex;
-        gap: 10rem;
     }
 
 
