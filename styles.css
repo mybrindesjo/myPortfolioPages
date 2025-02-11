@@ -474,7 +474,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     justify-items: center;
-    padding: 10px 20px;
+    padding: 2rem;
     background-color: #333;
     color: white;
 }
@@ -529,22 +529,20 @@ footer {
     padding: 5px 10px;
   }
 
-  li {
-    list-style: none;
-    display: flex;
-    background-color: #ff4d00;
-    flex-direction: row;
-    padding: 0.5rem;
-    border-radius: 8px;
-    width: 80px;
-  }
-
   .link-row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    text-align: center;
+    list-style: none;
+    padding: 1rem;
+  }
 
+  .link-about, .link-project {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem;
+    background-color: #ff4d00;
+    border-radius: 8px;
   }
   
 @media (min-width: 501px) {
