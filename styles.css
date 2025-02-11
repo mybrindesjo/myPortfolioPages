@@ -52,6 +52,7 @@ nav {
 
 .nav-link:hover {
     background: #ff6d40;
+    color: #ffffff;
 }
 
 .container {
@@ -531,13 +532,19 @@ footer {
   li {
     list-style: none;
     display: flex;
+    background-color: #ff4d00;
     flex-direction: row;
+    padding: 0.5rem;
+    border-radius: 8px;
+    width: 80px;
   }
 
   .link-row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    text-align: center;
+
   }
   
 @media (min-width: 501px) {
