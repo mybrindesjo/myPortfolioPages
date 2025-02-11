@@ -533,6 +533,12 @@ footer {
     display: flex;
     flex-direction: row;
   }
+
+  .link-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
   
 @media (min-width: 501px) {
     .row {
