@@ -284,6 +284,7 @@ footer {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .project-header {
