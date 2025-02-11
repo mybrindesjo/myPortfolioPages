@@ -669,6 +669,10 @@ footer {
 
     }
 
+    .row {
+        display: flex;
+        gap: 10rem;
+    }
 
 
 
