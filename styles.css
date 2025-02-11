@@ -387,14 +387,6 @@ footer {
     gap: 1rem;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    gap: 10rem;
-    justify-content: space-between;
-    padding: 1rem;
-}
-
 .project-details {
     display: flex;
     flex-direction: column;
@@ -535,6 +527,12 @@ footer {
     padding: 5px 10px;
   }
   
+@media (min-width: 501px) {
+    .row {
+        display: flex;
+        gap: 10rem;
+    }
+}
 
 @media (max-width: 500px) {
     .menu-toggle {
@@ -559,6 +557,14 @@ footer {
 
     .nav-link {
         padding: 10px 0;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+        padding: 1rem;
     }
 }
 
