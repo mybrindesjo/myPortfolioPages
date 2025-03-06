@@ -276,7 +276,7 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.project-card {
+.project-card, .project-card-row {
     background: rgba(0, 0, 0, 0.8);
     padding: 2rem;
     border-radius: 10px;
@@ -548,6 +548,10 @@ footer {
   .link-about:hover, .link-project:hover {
     background-color: #092901;
 }
+
+.project-text {
+    max-width: 1000px;
+}
   
 @media (min-width: 501px) {
     .row {
@@ -556,6 +560,18 @@ footer {
         gap: 10rem;
         justify-content: space-between;
         padding: 1rem;
+    }
+
+    .project-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: space-evenly;
+    }
+
+    .project-card-row {
+        display: flex;
+        flex-direction: row;
     }
 }
 
@@ -590,6 +606,13 @@ footer {
         gap: 1rem;
         justify-content: space-between;
         padding: 1rem;
+    }
+
+    .project-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: space-evenly;
     }
 }
 

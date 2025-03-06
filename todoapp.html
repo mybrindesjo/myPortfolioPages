@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Brindesjö</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/profilePicture.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="intro-card">
+            <div class="media-column">
+                <h1>Todo App</h1>
+                <p>En stilren och användarvänlig todo-app med React, med fokus på enkelhet och en engagerande upplevelse. Appen har ett mörkt tema med blå, gröna och röda accentfärger som skapar en tydlig och modern design.</p>
+            </div>
+        </section>
+
+        <article class="project-card-row">
+            <div class="project-header">
+                <h2>Design</h2>
+                <p class="project-text">Valet av färger bidrar till en harmonisk användarupplevelse. Blått symboliserar fokus och pålitlighet, grönt signalerar bekräftelse och positiv förstärkning, medan rött används för att tydligt indikera åtgärder som att radera uppgifter. Tack vare den responsiva designen fungerar appen lika bra på mobil som på dator.</p>
+            </div>
+                <img class="project-img" src="img/todoappFärg.png" alt="color">
+        </article>
+
+        <section class="project-card">
+            <div class="project-header">
+                <h2>Prototyp</h2>
+            </div>
+                <div class="project">
+                    <div class="row">
+                        <h3>Bilder och länk</h3>
+                        <button class="toggle-btn">+</button>
+                </div>
+                <div class="project-details" style="display: none;">
+                    <button class="project-btn">
+                        <a href="https://mytodapp.netlify.app">Se sidan här</a>
+                    </button>
+                    <div class="media-wrap">
+                        <img class="project-img" src="img/todoappPrototyp1.jpeg" alt="prototype1">
+                        <img class="project-img" src="img/todoappPrototyp2.jpeg" alt="prototype2">
+                        <img class="project-img" src="img/todoappPrototyp3.jpeg" alt="prototype3">
+                        <img class="project-img" src="img/todoappPrototyp4.jpeg" alt="prototype4">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-container">
+            <h2>Kompetenser</h2>
+            <ul class="skills">
+                <li>Användbarhet</li>
+                <li>Användarvänlig</li>
+                <li>React</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Responsiv design</li>
+                <li>Designsystem</li>
+                <li>Interaktionsdesign</li>
+                <li>Gränssnittsdesign</li>
+                <li>Designmönster</li>
+                <li>Projektplanering</li>
+                <li>Användarorienterad design</li>
+                <li>Web Content Accessibility Guidelines (WCAG)</li>
+                <li>Prototyping</li>
+            </ul>
+        </section>
+    </main>
+
+        <script src="scripts.js"></script>
+        <script>
+            document.querySelectorAll('.toggle-btn').forEach((button) => {
+                button.addEventListener('click', () => {
+                    const details = button.parentElement.nextElementSibling;
+                    if (details.style.display === 'none' || details.style.display === '') {
+                        details.style.display = 'block';
+                        button.textContent = '-';
+                    } else {
+                        details.style.display = 'none';
+                        button.textContent = '+';
+                    }
+                });
+            });
+        </script>
+    </body>
+    </html>
+
