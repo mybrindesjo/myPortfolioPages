@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Brindesjö</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/profilePicture.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="intro-card">
+            <div class="media-column">
+                <h1>First portfolio</h1>
+                <p>En personlig portfolio med fokus på enkelhet, kreativitet och en liten touch av min passion för hästar. Portfolion är kodad i HTML och CSS och har ett färger i grönt, vitt och orange, vilket ger en fräsch och energifylld känsla med naturliga och harmoniska inslag. En strukturerad layout med enkel navigering som gör det lätt att hitta mina projekt och erfarenheter. </p>
+            </div>
+        </section>
+
+        <article class="project-card-row">
+            <div class="project-header">
+                <h2>Design</h2>
+                <p class="project-text">Val av färger; kontrast, enkelhet och harmoni. Grönt symboliserar natur och balans. Vitt står för enkelhet och tydlighet. Orange tillför energi och värme. Bilderna speglar min spralliga personlighet och passion för hästar. Det ger portfolion en unik identitet och med sin responsiva design passar portfolion lika bra på mobil som dator.</p>
+            </div>
+                <img class="project-img" src="img/firstportfolioFarg.png" alt="color">
+        </article>
+
+        <section class="project-card">
+            <div class="project-header">
+                <h2>Prototyp</h2>
+            </div>
+                <div class="project">
+                    <div class="row">
+                        <h3>Portfolio</h3>
+                        <button class="toggle-btn">+</button>
+                </div>
+                <div class="project-details" style="display: none;">
+                    <button class="project-btn">
+                        <a href="https://mybrindesjo.github.io/myFirstPortfolio/">Se sidan här</a>
+                    </button>
+                    <div class="media-wrap">
+                        <img class="project-img" src="img/firstportfolioPrototyp1.png" alt="prototype1">
+                        <img class="project-img" src="img/firstportfolioPrototyp2.png" alt="prototype2">
+                        <img class="project-img" src="img/firstportfolioPrototyp3.png" alt="prototype3">
+                        <img class="project-img" src="img/firstportfolioPrototyp4.png" alt="prototype4">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-container">
+            <h2>Kompetenser</h2>
+            <ul class="skills">
+                <li>Användbarhet</li>
+                <li>Användarvänlig</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Responsiv design</li>
+                <li>Designsystem</li>
+                <li>Interaktionsdesign</li>
+                <li>Gränssnittsdesign</li>
+                <li>Designmönster</li>
+                <li>Projektplanering</li>
+                <li>Användarorienterad design</li>
+                <li>Web Content Accessibility Guidelines (WCAG)</li>
+                <li>Prototyping</li>
+                <li>GitHub</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Brindesjö. All rights reserved.</p>
+    </footer>
+        <script src="scripts.js"></script>
+        <script>
+            document.querySelectorAll('.toggle-btn').forEach((button) => {
+                button.addEventListener('click', () => {
+                    const details = button.parentElement.nextElementSibling;
+                    if (details.style.display === 'none' || details.style.display === '') {
+                        details.style.display = 'block';
+                        button.textContent = '-';
+                    } else {
+                        details.style.display = 'none';
+                        button.textContent = '+';
+                    }
+                });
+            });
+        </script>
+    </body>
+    </html>
+
