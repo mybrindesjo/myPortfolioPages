@@ -504,10 +504,6 @@ footer {
     transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-    color: #00bcd4;
-}
-
 /* Hamburgermeny */
 .menu-toggle {
     display: none;
@@ -547,6 +543,18 @@ footer {
   }
 
   .link-about:hover, .link-project:hover {
+    background-color: #092901;
+}
+
+.link-contact {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem;
+    background-color: #ff4d00;
+    border-radius: 8px;
+}
+
+.link-contact:hover {
     background-color: #092901;
 }
 
