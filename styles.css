@@ -203,6 +203,7 @@ social-img:hover {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    justify-content: space-between;
 }
 
 .info-card h3, .experience-card h3 {
