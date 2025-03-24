@@ -50,8 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
         mobileMenu.addEventListener("click", () => {
             navLinksContainer.classList.toggle("active");
         });
-    } else {
-        console.warn("Mobilmenyn hittades inte.");
     }
 
     // Markera aktiv sida i navbaren
@@ -65,7 +63,5 @@ document.addEventListener("DOMContentLoaded", function() {
                 link.classList.add("active");
             }
         });
-    } else {
-        console.warn("Inga navbar-länkar hittades.");
     }
 });
