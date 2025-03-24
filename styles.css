@@ -624,6 +624,10 @@ footer {
         gap: 2rem;
         justify-content: space-evenly;
     }
+
+    .info-card img {
+        display: none;
+    }
 }
 
 @media (min-width: 1024px) {
