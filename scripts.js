@@ -44,23 +44,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     const projectImages = document.querySelectorAll(".project-img");
-    const fullscreenOverlay = document.querySelector(".fullscreen-overlay");
-    const fullscreenImage = fullscreenOverlay ? fullscreenOverlay.querySelector("img") : null;
-    const closeBtn = fullscreenOverlay ? fullscreenOverlay.querySelector(".close-btn") : null;
 
-    if (projectImages.length > 0 && fullscreenOverlay && fullscreenImage && closeBtn) {
+    if (projectImages.length > 0) {
         projectImages.forEach(img => {
             img.addEventListener("click", function() {
-                fullscreenImage.src = this.src;
-                fullscreenOverlay.style.display = "flex";
+                // Om du inte vill använda fullscreen-funktionaliteten, ta bort koden här
+                console.log("Bild klickad: ", this.src);
             });
         });
-
-        closeBtn.addEventListener("click", function() {
-            fullscreenOverlay.style.display = "none";
-        });
     } else {
-        console.warn("Vissa element för bildvisning hittades inte.");
+        console.warn("Ingen projektbild hittades.");
     }
 
     const mobileMenu = document.getElementById("mobile-menu");
@@ -76,11 +69,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Markera aktiv sida i navbaren
     const navLinks = document.querySelectorAll(".nav-link");
-    const currentPath = window.location.pathname.split("/").pop();
+    const currentPath = window.location.pathname.split("/").pop().toLowerCase();
 
     if (navLinks.length > 0) {
         navLinks.forEach(link => {
-            if (link.getAttribute("href") === currentPath) {
+            if (link.getAttribute("href").toLowerCase() === currentPath) {
                 link.classList.add("active");
             }
         });

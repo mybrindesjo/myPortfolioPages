@@ -90,21 +90,21 @@
     <footer>
         <p>&copy; 2025 My Brindesjö. All rights reserved.</p>
     </footer>
-        <script src="scripts.js"></script>
-        <script>
-            document.querySelectorAll('.toggle-btn').forEach((button) => {
-                button.addEventListener('click', () => {
-                    const details = button.parentElement.nextElementSibling;
-                    if (details.style.display === 'none' || details.style.display === '') {
-                        details.style.display = 'block';
-                        button.textContent = '-';
-                    } else {
-                        details.style.display = 'none';
-                        button.textContent = '+';
-                    }
-                });
+    <script src="scripts.js"></script>
+    <script>
+        document.querySelectorAll('.toggle-btn').forEach((button) => {
+            button.addEventListener('click', () => {
+                const details = button.parentElement.nextElementSibling;
+                if (details.style.display === 'none' || details.style.display === '') {
+                    details.style.display = 'block';
+                    button.textContent = '-';
+                } else {
+                    details.style.display = 'none';
+                    button.textContent = '+';
+                }
             });
-        </script>
-    </body>
-    </html>
+        });
+    </script>
+</body>
+</html>
 
