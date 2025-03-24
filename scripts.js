@@ -43,19 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    const projectImages = document.querySelectorAll(".project-img");
-
-    if (projectImages.length > 0) {
-        projectImages.forEach(img => {
-            img.addEventListener("click", function() {
-                // Om du inte vill använda fullscreen-funktionaliteten, ta bort koden här
-                console.log("Bild klickad: ", this.src);
-            });
-        });
-    } else {
-        console.warn("Ingen projektbild hittades.");
-    }
-
     const mobileMenu = document.getElementById("mobile-menu");
     const navLinksContainer = document.querySelector(".nav-links");
 
@@ -69,11 +56,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Markera aktiv sida i navbaren
     const navLinks = document.querySelectorAll(".nav-link");
-    const currentPath = window.location.pathname.split("/").pop().toLowerCase();
+    const currentPath = window.location.pathname.toLowerCase();
 
     if (navLinks.length > 0) {
         navLinks.forEach(link => {
-            if (link.getAttribute("href").toLowerCase() === currentPath) {
+            const linkPath = new URL(link.href).pathname.toLowerCase();
+            if (linkPath === currentPath) {
                 link.classList.add("active");
             }
         });
