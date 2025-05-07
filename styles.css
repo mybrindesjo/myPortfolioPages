@@ -48,6 +48,7 @@ nav {
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
 }
 
 .nav-link:hover {
@@ -503,6 +504,7 @@ footer {
     text-decoration: none;
     color: white;
     transition: color 0.3s ease;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
 }
 
 /* Hamburgermeny */
