@@ -22,6 +22,9 @@
                 <li><a class="nav-link" href="about.html">Om mig</a></li>
                 <li><a class="nav-link" href="projects.html">Projekt</a></li>
             </ul>
+            <div class="lamp-toggle">
+                <img id="lamp-icon" src="img/lamp-on.png" alt="Lamp Icon" width="40" height="40">
+            </div>
         </nav>
     </header>
     
@@ -92,16 +95,32 @@
     </footer>
     <script src="scripts.js"></script>
     <script>
-        document.querySelectorAll('.toggle-btn').forEach((button) => {
+        // Restore dark mode state from localStorage
+        const lampIcon = document.getElementById('lamp-icon');
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            lampIcon.src = 'img/lamp-off.png';
+        }
+
+        lampIcon.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            lampIcon.src = isDarkMode ? 'img/lamp-off.png' : 'img/lamp-on.png';
+            localStorage.setItem('darkMode', isDarkMode);
+        });
+
+        // Restore project details visibility from localStorage
+        document.querySelectorAll('.toggle-btn').forEach((button, index) => {
+            const details = button.parentElement.nextElementSibling;
+            const isVisible = localStorage.getItem(`projectDetails${index}`) === 'true';
+            details.style.display = isVisible ? 'block' : 'none';
+            button.textContent = isVisible ? '-' : '+';
+
             button.addEventListener('click', () => {
-                const details = button.parentElement.nextElementSibling;
-                if (details.style.display === 'none' || details.style.display === '') {
-                    details.style.display = 'block';
-                    button.textContent = '-';
-                } else {
-                    details.style.display = 'none';
-                    button.textContent = '+';
-                }
+                const isCurrentlyVisible = details.style.display === 'block';
+                details.style.display = isCurrentlyVisible ? 'none' : 'block';
+                button.textContent = isCurrentlyVisible ? '+' : '-';
+                localStorage.setItem(`projectDetails${index}`, !isCurrentlyVisible);
             });
         });
     </script>

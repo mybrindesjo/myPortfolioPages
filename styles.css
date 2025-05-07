@@ -565,6 +565,34 @@ footer {
     max-width: 1000px;
 }
   
+.lamp-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lamp {
+    display: flex;
+    align-items: center;
+}
+
+body.dark-mode {
+    background: #272727;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+body.dark-mode .form {
+    background: rgba(30, 30, 30, 0.9);
+    color: #e0e0e0;
+}
+
 @media (min-width: 501px) {
     .row {
         display: flex;
