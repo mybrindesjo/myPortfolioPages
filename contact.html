@@ -27,10 +27,6 @@
                 <img id="lamp-icon" src="img/lamp-on.png" alt="Lamp Icon" width="40" height="40">
             </div>
         </nav>
-        </section>
-            <div class="lamp-toggle">
-                <img id="lamp-icon" src="img/lamp-on.png" alt="Lamp Icon" width="40" height="40">
-            </div>
     </header>
     <main>
         <section class="intro">
@@ -70,6 +66,7 @@
     </footer>
     <script src="scripts.js"></script>
     <script>
+        // Restore dark mode state from localStorage
         const lampIcon = document.getElementById('lamp-icon');
         if (localStorage.getItem('darkMode') === 'true') {
             document.body.classList.add('dark-mode');
