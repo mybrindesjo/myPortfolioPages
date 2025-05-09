@@ -16,7 +16,7 @@
                 <img src="img/lightmode.png" alt="Light Mode" id="lightmode-icon">
             </div>
             <div class="language-toggle">
-                <button id="language-btn">EN 🇬🇧</button>
+                <button id="language-btn">🇬🇧</button>
             </div>
         </section>
 
@@ -54,7 +54,7 @@
     <main>
         <section class="intro">
             <h1 class="intro-title" data-sv="Välkommen" data-en="Welcome">Välkommen</h1>
-            <p class="intro-description" data-sv="Jag är en engagerad frontendutvecklare och UX/UI-designer strävar jag efter att skapa användarvänliga och visuellt tilltalande lösningar. Klicka vidare nedan för att läsa mer om mig och utforska mina projekt!" data-en="As a passionate frontend developer and UX/UI designer, I strive to create user-friendly and visually appealing solutions. Click below to learn more about me and explore my projects!">Jag är en engagerad frontendutvecklare och UX/UI-designer...</p>
+            <p class="intro-description" data-sv="Jag är engagerad frontendutvecklare och UX/UI-designer strävar jag efter att skapa användarvänliga och visuellt tilltalande lösningar. Klicka vidare nedan för att läsa mer om mig och utforska mina projekt!" data-en="As a passionate frontend developer and UX/UI designer, I strive to create user-friendly and visually appealing solutions. Click below to learn more about me and explore my projects!">Jag är engagerad frontendutvecklare och UX/UI-designer...</p>
             <div class="link-row">
                 <li><a class="link-about" href="about.html" data-sv="Om mig" data-en="About Me">Om mig</a></li>
                 <li><a class="link-project" href="projects.html" data-sv="Projekt" data-en="Projects">Projekt</a></li>
@@ -102,7 +102,7 @@
                     el.textContent = translation;
                 }
             });
-            languageBtn.innerHTML = lang === "sv" ? `EN 🇬🇧` : `SV 🇸🇪`;
+            languageBtn.innerHTML = lang === "sv" ? `🇬🇧` : `🇸🇪`;
             localStorage.setItem("language", lang);
         }
 

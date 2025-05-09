@@ -28,7 +28,7 @@
                     <img src="img/lightmode.png" alt="Light Mode" id="lightmode-icon">
                 </div>
                 <div class="language-toggle">
-                    <button id="language-btn">EN 🇬🇧</button>
+                    <button id="language-btn">🇬🇧</button>
                 </div>
             </section>
         </nav>
@@ -38,14 +38,14 @@
         <section class="intro-card hidden">
             <div class="media-column">
                 <h1>First portfolio</h1>
-                <p>En personlig portfolio med fokus på enkelhet, kreativitet och en liten touch av min passion för hästar. Portfolion är kodad i HTML och CSS och har ett färger i grönt, vitt och orange, vilket ger en fräsch och energifylld känsla med naturliga och harmoniska inslag. En strukturerad layout med enkel navigering som gör det lätt att hitta mina projekt och erfarenheter.</p>
+                <p>personlig portfolio med fokus på enkelhet, kreativitet och littouch av min passion för hästar. Portfolion är kodad i HTML och CSS och har ett färger i grönt, vitt och orange, vilket ger fräsch och energifylld känsla med naturliga och harmoniska inslag. strukturerad layout med enkel navigering som gör det lätt att hitta mina projekt och erfarenheter.</p>
             </div>
         </section>
 
         <article class="project-card-row hidden">
             <div class="project-header">
                 <h2>Design</h2>
-                <p class="project-text">Val av färger; kontrast, enkelhet och harmoni. Grönt symboliserar natur och balans. Vitt står för enkelhet och tydlighet. Orange tillför energi och värme. Bilderna speglar min spralliga personlighet och passion för hästar. Det ger portfolion en unik identitet och med sin responsiva design passar portfolion lika bra på mobil som dator.</p>
+                <p class="project-text">Val av färger; kontrast, enkelhet och harmoni. Grönt symboliserar natur och balans. Vitt står för enkelhet och tydlighet. Orange tillför energi och värme. Bilderna speglar min spralliga personlighet och passion för hästar. Det ger portfolion unik identitet och med sin responsiva design passar portfolion lika bra på mobil som dator.</p>
             </div>
                 <img class="project-img hidden" src="img/firstportfolioFarg.png" alt="color">
         </article>
@@ -124,9 +124,9 @@
         const translations = {
             sv: {
                 title: "First portfolio",
-                intro: "En personlig portfolio med fokus på enkelhet, kreativitet och en liten touch av min passion för hästar. Portfolion är kodad i HTML och CSS och har ett färger i grönt, vitt och orange, vilket ger en fräsch och energifylld känsla med naturliga och harmoniska inslag. En strukturerad layout med enkel navigering som gör det lätt att hitta mina projekt och erfarenheter.",
+                intro: "personlig portfolio med fokus på enkelhet, kreativitet och littouch av min passion för hästar. Portfolion är kodad i HTML och CSS och har ett färger i grönt, vitt och orange, vilket ger fräsch och energifylld känsla med naturliga och harmoniska inslag. strukturerad layout med enkel navigering som gör det lätt att hitta mina projekt och erfarenheter.",
                 designHeader: "Design",
-                designText: "Val av färger; kontrast, enkelhet och harmoni. Grönt symboliserar natur och balans. Vitt står för enkelhet och tydlighet. Orange tillför energi och värme. Bilderna speglar min spralliga personlighet och passion för hästar. Det ger portfolion en unik identitet och med sin responsiva design passar portfolion lika bra på mobil som dator.",
+                designText: "Val av färger; kontrast, enkelhet och harmoni. Grönt symboliserar natur och balans. Vitt står för enkelhet och tydlighet. Orange tillför energi och värme. Bilderna speglar min spralliga personlighet och passion för hästar. Det ger portfolion unik identitet och med sin responsiva design passar portfolion lika bra på mobil som dator.",
                 prototypeHeader: "Prototyp",
                 skillsHeader: "Kompetenser"
             },
@@ -134,7 +134,7 @@
                 title: "First portfolio",
                 intro: "A personal portfolio focusing on simplicity, creativity, and a touch of my passion for horses. The portfolio is coded in HTML and CSS and features colors in green, white, and orange, giving a fresh and energetic feel with natural and harmonious elements. A structured layout with easy navigation makes it simple to find my projects and experiences.",
                 designHeader: "Design",
-                designText: "Choice of colors; contrast, simplicity, and harmony. Green symbolizes nature and balance. White represents simplicity and clarity. Orange adds energy and warmth. The images reflect my bubbly personality and passion for horses. This gives the portfolio a unique identity, and with its responsive design, it works equally well on mobile and desktop.",
+                designText: "Choice of colors; contrast, simplicity, and harmony. Gresymbolizes nature and balance. White represents simplicity and clarity. Orange adds energy and warmth. The images reflect my bubbly personality and passion for horses. This gives the portfolio a unique identity, and with its responsive design, it works equally well on mobile and desktop.",
                 prototypeHeader: "Prototype",
                 skillsHeader: "Skills"
             }
@@ -167,7 +167,7 @@
             localStorage.setItem("language", lang);
 
             // Update button text
-            languageBtn.textContent = lang === "sv" ? `EN 🇬🇧` : `SV 🇸🇪`;
+            languageBtn.textContent = lang === "sv" ? `🇬🇧` : `🇸🇪`;
         }
 
         // Get saved language from localStorage or default to "sv"
@@ -175,7 +175,7 @@
         setLanguage(savedLanguage);
 
         languageBtn.addEventListener("click", () => {
-            // Toggle between "sv" and "en"
+            // Toggle betwe"sv" and "en"
             savedLanguage = savedLanguage === "sv" ? "en" : "sv";
             setLanguage(savedLanguage);
         });

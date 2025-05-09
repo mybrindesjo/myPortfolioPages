@@ -28,7 +28,7 @@
                     <img src="img/lightmode.png" alt="Light Mode" id="lightmode-icon">
                 </div>
                 <div class="language-toggle">
-                    <button id="language-btn">EN 🇬🇧</button>
+                    <button id="language-btn">🇬🇧</button>
                 </div>
             </section>
         </nav>
@@ -38,14 +38,14 @@
         <section class="intro-card hidden">
             <div class="media-column">
                 <h1>Todo App</h1>
-                <p>En stilren och användarvänlig todo-app med React, med fokus på enkelhet och en engagerande upplevelse. Appen har ett mörkt tema med blå, gröna och röda accentfärger som skapar en tydlig och modern design.</p>
+                <p>stilroch användarvänlig todo-app med React, med fokus på enkelhet och engagerande upplevelse. Apphar ett mörkt tema med blå, gröna och röda accentfärger som skapar tydlig och modern design.</p>
             </div>
         </section>
 
         <article class="project-card-row hidden">
             <div class="project-header">
                 <h2>Design</h2>
-                <p class="project-text">Valet av färger bidrar till en harmonisk användarupplevelse. Blått symboliserar fokus och pålitlighet, grönt signalerar bekräftelse och positiv förstärkning, medan rött används för att tydligt indikera åtgärder som att radera uppgifter. Tack vare den responsiva designen fungerar appen lika bra på mobil som på dator.</p>
+                <p class="project-text">Valet av färger bidrar till harmonisk användarupplevelse. Blått symboliserar fokus och pålitlighet, grönt signalerar bekräftelse och positiv förstärkning, medan rött används för att tydligt indikera åtgärder som att radera uppgifter. Tack vare dresponsiva designfungerar applika bra på mobil som på dator.</p>
             </div>
                 <img class="project-img hidden" src="img/todoappFarg.png" alt="color">
         </article>
@@ -125,13 +125,13 @@
         });
 
 
-        // Hämtar språkknappen och definierar översättningar
+        // Hämtar språkknappoch definierar översättningar
         const languageBtn = document.getElementById("language-btn");
         const translations = {
             sv: {
-                intro: "En stilren och användarvänlig todo-app med React, med fokus på enkelhet och en engagerande upplevelse. Appen har ett mörkt tema med blå, gröna och röda accentfärger som skapar en tydlig och modern design.",
+                intro: "stilroch användarvänlig todo-app med React, med fokus på enkelhet och engagerande upplevelse. Apphar ett mörkt tema med blå, gröna och röda accentfärger som skapar tydlig och modern design.",
                 designTitle: "Design",
-                designText: "Valet av färger bidrar till en harmonisk användarupplevelse. Blått symboliserar fokus och pålitlighet, grönt signalerar bekräftelse och positiv förstärkning, medan rött används för att tydligt indikera åtgärder som att radera uppgifter. Tack vare den responsiva designen fungerar appen lika bra på mobil som på dator.",
+                designText: "Valet av färger bidrar till harmonisk användarupplevelse. Blått symboliserar fokus och pålitlighet, grönt signalerar bekräftelse och positiv förstärkning, medan rött används för att tydligt indikera åtgärder som att radera uppgifter. Tack vare dresponsiva designfungerar applika bra på mobil som på dator.",
                 prototypeTitle: "Prototyp",
                 prototypeBtnText: "Se sidan här",
                 competenciesTitle: "Kompetenser"
@@ -139,7 +139,7 @@
             en: {
                 intro: "A sleek and user-friendly todo app built with React, focusing on simplicity and an engaging experience. The app features a dark theme with blue, green, and red accent colors, creating a clean and modern design.",
                 designTitle: "Design",
-                designText: "The choice of colors contributes to a harmonious user experience. Blue represents focus and reliability, green signals confirmation and positive reinforcement, while red is used to clearly indicate actions like deleting tasks. Thanks to the responsive design, the app works just as well on mobile as on desktop.",
+                designText: "The choice of colors contributes to a harmonious user experience. Blue represents focus and reliability, gresignals confirmation and positive reinforcement, while red is used to clearly indicate actions like deleting tasks. Thanks to the responsive design, the app works just as well on mobile as on desktop.",
                 prototypeTitle: "Prototype",
                 prototypeBtnText: "See the page here",
                 competenciesTitle: "Skills"
@@ -162,8 +162,8 @@
         // Uppdatera sidan baserat på språket
         function updateLanguage(lang) {
             languageBtn.innerHTML = lang === "sv"
-                ? `EN 🇬🇧`
-                : `SV 🇸🇪`;
+                ? `🇬🇧`
+                : `🇸🇪`;
 
             for (const key in translations[lang]) {
                 if (elementsToTranslate[key]) {
