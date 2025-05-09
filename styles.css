@@ -531,8 +531,9 @@ footer {
 
   .link-row {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
     list-style: none;
     padding: 1rem;
   }
