@@ -82,3 +82,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     hiddenElements.forEach(element => observer.observe(element));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const skillItems = document.querySelectorAll(".skills li");
+  
+    skillItems.forEach((item, index) => {
+      item.style.animationDelay = `${index * 0.50}s`; // 150ms mellan varje
+      item.classList.add("show");
+    });
+  });

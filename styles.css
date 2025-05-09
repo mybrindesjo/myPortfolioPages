@@ -37,22 +37,10 @@ nav {
 }
 
 .nav-links {
-    display: none; /* Dölj länkar som standard */
-    flex-direction: column; /* Gör länkarna vertikala */
-    text-align: center;
-}
-
-/* När .active läggs till, visa länkarna */
-.nav-links.active {
-    display: flex; /* Visa länkarna */
-}
-
-/* Anpassning för större skärmar */
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex; /* Visa länkarna alltid på större skärmar */
-        flex-direction: row; /* Gör länkarna horisontella */
-    }
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .nav-link {
@@ -529,7 +517,7 @@ footer {
 
 /* Hamburgermeny */
 .menu-toggle {
-    display: flex;
+    display: none;
     flex-direction: column;
     cursor: pointer;
 }
