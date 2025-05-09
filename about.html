@@ -32,7 +32,7 @@
 
     <main>
         
-        <section class="intro-card">
+        <section class="intro-card hidden">
             <img class="me-picture" src="img/my.jpeg" alt="me-picture" width="600" height="400">
             <div class="media-column">
                 <h1>Vem är jag?</h1>
@@ -43,10 +43,10 @@
             </div>
         </section>
 
-        <div class="media-row">
-            <section class="info-container">
+        <div class="media-row hidden">
+            <section class="info-container hidden">
                 <h2>Utbildning</h2>
-                <article class="info-card">
+                <article class="info-card hidden">
                     <img src="img/chasacademy.jpeg" alt="Chas Academy"> 
                     <div class="info-text">
                         <h3>Chas Academy</h3>
@@ -66,7 +66,7 @@
                     </div>
                 </article>
     
-                <article class="info-card">
+                <article class="info-card hidden">
                     <img src="img/sodra.png" alt="High School"> 
                     <div class="info-text">
                         <h3>Södra Stockholms folkhögskola</h3>
@@ -75,7 +75,7 @@
                     </div>
                 </article>
     
-                <article class="info-card">
+                <article class="info-card hidden">
                     <img src="img/bollerup.png" alt="Bollerup"> 
                     <div class="info-text">                
                         <h3>Bollerups naturbruksgymnasium</h3>
@@ -83,9 +83,9 @@
                         <p>2021 - 2023</p>
                     </div>
             </section>
-            <section class="info-container">
+            <section class="info-container hidden">
                 <h2>Arbetslivserfarenhet</h2>
-                <article class="info-card">
+                <article class="info-card hidden">
                     <img src="img/skansen_logo.jpeg" alt="skansen_logo" width="100" height="100">
                     <div class="info-text">
                         <h3>Skansen</h3>
@@ -94,7 +94,7 @@
                     </div>
                 </article>
     
-                <article class="info-card">
+                <article class="info-card hidden">
                     <img src="img/strangnaskommun.png" alt="strangnaskommun_logo">
                     <div class="info-text">
                         <h3>Strängnäs kommun</h3>
@@ -103,7 +103,7 @@
                     </div>
                 </article>
     
-                <article class="info-card">
+                <article class="info-card hidden">
                     <img src="img/bollerup.png" alt="bollerups_logo">
                     <div class="info-text">                
                         <h3>Bollerups naturbruksgymnasium</h3>
@@ -114,10 +114,10 @@
             </section>
             </div>
        
-        <section class="info-container">
+        <section class="info-container hidden">
             <h2>Erfarenheter</h2>
-        <div class="media-row">
-            <article class="experience-card">
+        <div class="media-row hidden">
+            <article class="experience-card hidden">
                 <h3>Sportkörning på elitnivå</h3>
                 <div class="description">
                     <p>Under 2023 hade jag förmånen att vara lärling i sportkörningslandslaget. 
@@ -127,7 +127,7 @@
                 </div>
             </article>
 
-            <article class="experience-card">
+            <article class="experience-card hidden">
                 <h3>Erfarenhet inom hästnäringen</h3>
                 <div class="description">
                     <p>Jag har praktiserat och arbetat i flera stall, alltid med goda resultat och höga 
@@ -135,7 +135,7 @@
                 </div>
             </article>
 
-            <article class="experience-card">
+            <article class="experience-card hidden">
                 <h3>Ledarskap och engagemang</h3>
                 <div class="description">
                     <p>Mitt ledarskap har utvecklats genom min roll som hjälpledare för en scoutgrupp, 
@@ -149,9 +149,9 @@
         </div>
         </section>
 
-        <section class="info-container">
+        <section class="info-container hidden">
             <h2>Kompetenser</h2>
-            <ul class="skills">
+            <ul class="skills hidden">
                 <li>Figma</li>
                 <li>HTML & CSS</li>
                 <li>JavaScript</li>
@@ -208,19 +208,5 @@
         <p>&copy; 2025 My Brindesjö. All rights reserved.</p>
     </footer>
     <script src="scripts.js"></script>
-    <script>
-        const lampIcon = document.getElementById('lamp-icon');
-        if (localStorage.getItem('darkMode') === 'true') {
-            document.body.classList.add('dark-mode');
-            lampIcon.src = 'img/lamp-off.png';
-        }
-
-        lampIcon.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            lampIcon.src = isDarkMode ? 'img/lamp-off.png' : 'img/lamp-on.png';
-            localStorage.setItem('darkMode', isDarkMode);
-        });
-    </script>
 </body>
 </html>

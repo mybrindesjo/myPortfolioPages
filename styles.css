@@ -594,6 +594,37 @@ body.dark-mode .form {
     color: #e0e0e0;
 }
 
+/* Dold standardstil för element */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Öka transition-duration till 1.5s */
+}
+
+/* Synlig stil när elementet är i vy */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills li, .experience-card, .project-info, .project-img {
+    opacity: 0;
+    transform: translateX(50px); /* flytta in från höger */
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  .skills li.show, .experience-card.show, .project-info.show, .project-img.show {
+    animation-name: slideInRight;
+  }
+  
+  @keyframes slideInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+
 @media (min-width: 501px) {
     .row {
         display: flex;
