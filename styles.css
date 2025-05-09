@@ -614,6 +614,14 @@ body.dark-mode .form {
         display: flex;
         flex-direction: row;
     }
+    
+    .link-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 500px) {
