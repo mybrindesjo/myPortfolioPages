@@ -25,7 +25,7 @@
             </ul>
             <section class="toggle-icons">
                 <div class="themmode-toggle">
-                    <img src="img/lightmode.png" alt="Light Mode" id="lightmode-icon">
+                    <img src="img/darkmode.png" alt="Dark Mode" id="theme-toggle-icon">
                 </div>
                 <div class="language-toggle">
                     <button id="language-btn">🇬🇧</button>
@@ -98,88 +98,88 @@
     </footer>
     <script src="scripts.js"></script>
     <script>
-        const themeToggle = document.getElementById("lightmode-icon");
-        const savedTheme = localStorage.getItem("theme") || "light"; // Standard: ljust läge
+    const themeToggle = document.getElementById("theme-toggle-icon");
+    const languageBtn = document.getElementById("language-btn");
 
-        // Ställ in tema vid laddning
-        document.body.classList.add(savedTheme + "-mode");
-        themeToggle.src = savedTheme === "light" ? "img/lightmode.png" : "img/darkmode.png";
+    // Hantera tema
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.body.classList.add(savedTheme + "-mode");
+    themeToggle.src = savedTheme === "light" ? "img/darkmode.png" : "img/lightmode.png";
 
-        // Toggla mellan mörkt och ljust läge
-        themeToggle.addEventListener("click", () => {
-            const currentTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
-            const newTheme = currentTheme === "light" ? "dark" : "light";
-            
-            // Byt tema
-            document.body.classList.remove(currentTheme + "-mode");
-            document.body.classList.add(newTheme + "-mode");
-            
-            // Uppdatera ikon
-            themeToggle.src = newTheme === "light" ? "img/lightmode.png" : "img/darkmode.png";
-            
-            // Spara tema i localStorage
-            localStorage.setItem("theme", newTheme);
-        });
+    themeToggle.addEventListener("click", () => {
+        const currentTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
+        const newTheme = currentTheme === "light" ? "dark" : "light";
 
-        const translations = {
-            sv: {
-                title: "First portfolio",
-                intro: "personlig portfolio med fokus på enkelhet, kreativitet och littouch av min passion för hästar. Portfolion är kodad i HTML och CSS och har ett färger i grönt, vitt och orange, vilket ger fräsch och energifylld känsla med naturliga och harmoniska inslag. strukturerad layout med enkel navigering som gör det lätt att hitta mina projekt och erfarenheter.",
-                designHeader: "Design",
-                designText: "Val av färger; kontrast, enkelhet och harmoni. Grönt symboliserar natur och balans. Vitt står för enkelhet och tydlighet. Orange tillför energi och värme. Bilderna speglar min spralliga personlighet och passion för hästar. Det ger portfolion unik identitet och med sin responsiva design passar portfolion lika bra på mobil som dator.",
-                prototypeHeader: "Prototyp",
-                skillsHeader: "Kompetenser"
-            },
-            en: {
-                title: "First portfolio",
-                intro: "A personal portfolio focusing on simplicity, creativity, and a touch of my passion for horses. The portfolio is coded in HTML and CSS and features colors in green, white, and orange, giving a fresh and energetic feel with natural and harmonious elements. A structured layout with easy navigation makes it simple to find my projects and experiences.",
-                designHeader: "Design",
-                designText: "Choice of colors; contrast, simplicity, and harmony. Gresymbolizes nature and balance. White represents simplicity and clarity. Orange adds energy and warmth. The images reflect my bubbly personality and passion for horses. This gives the portfolio a unique identity, and with its responsive design, it works equally well on mobile and desktop.",
-                prototypeHeader: "Prototype",
-                skillsHeader: "Skills"
-            }
-        };
+        document.body.classList.remove(currentTheme + "-mode");
+        document.body.classList.add(newTheme + "-mode");
 
-        const languageBtn = document.getElementById("language-btn");
-        const elementsToTranslate = {
-            title: document.querySelector(".intro-card h1"),
-            intro: document.querySelector(".intro-card p"),
-            designHeader: document.querySelector(".project-card-row h2"),
-            designText: document.querySelector(".project-card-row p"),
-            prototypeHeader: document.querySelector(".project-card h2"),
-            skillsHeader: document.querySelector(".info-container h2")
-        };
+        themeToggle.style.opacity = 0;
+        setTimeout(() => {
+            themeToggle.src = newTheme === "light" ? "img/darkmode.png" : "img/lightmode.png";
+            themeToggle.style.opacity = 1;
+        }, 200);
 
-        function setLanguage(lang) {
-            const translation = translations[lang];
-            if (!translation) {
-                console.error("Translation not found for language:", lang);
-                return;
-            }
+        localStorage.setItem("theme", newTheme);
+    });
 
-            elementsToTranslate.title.textContent = translation.title;
-            elementsToTranslate.intro.textContent = translation.intro;
-            elementsToTranslate.designHeader.textContent = translation.designHeader;
-            elementsToTranslate.designText.textContent = translation.designText;
-            elementsToTranslate.prototypeHeader.textContent = translation.prototypeHeader;
-            elementsToTranslate.skillsHeader.textContent = translation.skillsHeader;
+    // Översättningar
+    const translations = {
+        sv: {
+            title: "First portfolio",
+            intro: "personlig portfolio med fokus på enkelhet, kreativitet och littouch av min passion för hästar. Portfolion är kodad i HTML och CSS och har ett färger i grönt, vitt och orange, vilket ger fräsch och energifylld känsla med naturliga och harmoniska inslag. strukturerad layout med enkel navigering som gör det lätt att hitta mina projekt och erfarenheter.",
+            designHeader: "Design",
+            designText: "Val av färger; kontrast, enkelhet och harmoni. Grönt symboliserar natur och balans. Vitt står för enkelhet och tydlighet. Orange tillför energi och värme. Bilderna speglar min spralliga personlighet och passion för hästar. Det ger portfolion unik identitet och med sin responsiva design passar portfolion lika bra på mobil som dator.",
+            prototypeHeader: "Prototyp",
+            skillsHeader: "Kompetenser"
+        },
+        en: {
+            title: "First portfolio",
+            intro: "A personal portfolio focusing on simplicity, creativity, and a touch of my passion for horses. The portfolio is coded in HTML and CSS and features colors in green, white, and orange, giving a fresh and energetic feel with natural and harmonious elements. A structured layout with easy navigation makes it simple to find my projects and experiences.",
+            designHeader: "Design",
+            designText: "Choice of colors; contrast, simplicity, and harmony. Green symbolizes nature and balance. White represents simplicity and clarity. Orange adds energy and warmth. The images reflect my bubbly personality and passion for horses. This gives the portfolio a unique identity, and with its responsive design, it works equally well on mobile and desktop.",
+            prototypeHeader: "Prototype",
+            skillsHeader: "Skills"
+        }
+    };
 
-            localStorage.setItem("language", lang);
+    const elementsToTranslate = {
+        title: document.querySelector(".intro-card h1"),
+        intro: document.querySelector(".intro-card p"),
+        designHeader: document.querySelector(".project-card-row h2"),
+        designText: document.querySelector(".project-card-row p"),
+        prototypeHeader: document.querySelector(".project-card h2"),
+        skillsHeader: document.querySelector(".info-container h2")
+    };
 
-            // Update button text
-            languageBtn.textContent = lang === "sv" ? `🇬🇧` : `🇸🇪`;
+    function setLanguage(lang) {
+        const translation = translations[lang];
+        if (!translation) {
+            console.error("Translation not found for language:", lang);
+            return;
         }
 
-        // Get saved language from localStorage or default to "sv"
-        let savedLanguage = localStorage.getItem("language") || "sv";
+        elementsToTranslate.title.textContent = translation.title;
+        elementsToTranslate.intro.textContent = translation.intro;
+        elementsToTranslate.designHeader.textContent = translation.designHeader;
+        elementsToTranslate.designText.textContent = translation.designText;
+        elementsToTranslate.prototypeHeader.textContent = translation.prototypeHeader;
+        elementsToTranslate.skillsHeader.textContent = translation.skillsHeader;
+
+        localStorage.setItem("language", lang);
+
+        // Uppdatera knapptext
+        languageBtn.textContent = lang === "sv" ? `🇬🇧` : `🇸🇪`;
+    }
+
+    // Hämta sparat språk från localStorage eller standard till "sv"
+    let savedLanguage = localStorage.getItem("language") || "sv";
+    setLanguage(savedLanguage);
+
+    languageBtn.addEventListener("click", () => {
+        // Växla mellan "sv" och "en"
+        savedLanguage = savedLanguage === "sv" ? "en" : "sv";
         setLanguage(savedLanguage);
-
-        languageBtn.addEventListener("click", () => {
-            // Toggle betwe"sv" and "en"
-            savedLanguage = savedLanguage === "sv" ? "en" : "sv";
-            setLanguage(savedLanguage);
-        });
-
-</script>
+    });
+    </script>
 </body>
 </html>

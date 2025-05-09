@@ -85,28 +85,28 @@
 
     <script src="scripts.js"></script>
     <script>
-        const themeToggle = document.getElementById("lightmode-icon");
-                const savedTheme = localStorage.getItem("theme") || "light"; // Standard: ljust läge
+const themeToggle = document.getElementById("lightmode-icon");
+        const savedTheme = localStorage.getItem("theme") || "light"; // Standard: ljust läge
 
-                // Ställ in tema vid laddning
-                document.body.classList.add(savedTheme + "-mode");
-                themeToggle.src = savedTheme === "light" ? "img/lightmode.png" : "img/darkmode.png";
+        // Ställ in tema vid laddning
+        document.body.classList.add(savedTheme + "-mode");
+        themeToggle.src = savedTheme === "light" ? "img/darkmode.png" : "img/lightmode.png"; // Byt till rätt ikon
 
-                // Toggla mellan mörkt och ljust läge
-                themeToggle.addEventListener("click", () => {
-                    const currentTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
-                    const newTheme = currentTheme === "light" ? "dark" : "light";
-                    
-                    // Byt tema
-                    document.body.classList.remove(currentTheme + "-mode");
-                    document.body.classList.add(newTheme + "-mode");
-                    
-                    // Uppdatera ikon
-                    themeToggle.src = newTheme === "light" ? "img/lightmode.png" : "img/darkmode.png";
-                    
-                    // Spara tema i localStorage
-                    localStorage.setItem("theme", newTheme);
-                });
+        // Toggla mellan mörkt och ljust läge
+        themeToggle.addEventListener("click", () => {
+            const currentTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+            
+            // Byt tema
+            document.body.classList.remove(currentTheme + "-mode");
+            document.body.classList.add(newTheme + "-mode");
+            
+            // Uppdatera ikon
+            themeToggle.src = newTheme === "light" ? "img/darkmode.png" : "img/lightmode.png"; // Byt till rätt ikon
+            
+            // Spara tema i localStorage
+            localStorage.setItem("theme", newTheme);
+        });
 
 
         const translations = {
