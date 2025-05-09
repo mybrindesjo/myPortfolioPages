@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,122 +22,44 @@
                 <li><a class="nav-link" href="about.html">Om mig</a></li>
                 <li><a class="nav-link" href="projects.html">Projekt</a></li>
                 <li><a class="nav-link" href="contact.html">Kontakt</a></li>
-
             </ul>
-            <div class="lamp-toggle">
-                <img id="lamp-icon" src="img/lamp-on.png" alt="Lamp Icon" width="40" height="40">
-            </div>
+            <section class="toggle-icons">
+                <div class="themmode-toggle">
+                    <img src="img/lightmode.png" alt="Light Mode" id="lightmode-icon">
+                </div>
+                <div class="language-toggle">
+                    <button id="language-btn">EN 🇬🇧</button>
+                </div>
+            </section>
         </nav>
     </header>
     
     <main>
-        <section class="intro-card hidden">
+        <section class="intro-card">
             <div class="media-column">
                 <h1>Stalltid</h1>
-                <p>En fiktiv app för bokning av hästupplevelser. Vem har inte velat fly vardagen och uppleva en mysig turridning med våra fyrbenta vänner? Perfekt möjlighet att varva ner, tanka energi och återhämtning. Vårt mål var att förmedla den där naturliga, glada och avslappnade känslan genom vår visuella identitet. Mjuka, naturnära färger och lättlästa typsnitt valdes för att skapa ett inbjudande och harmoniskt intryck.</p>
+                <p>En fiktiv app för bokning av hästupplevelser. Vem har inte velat fly vardagen och uppleva en mysig turridning med våra fyrbenta vänner? Perfekt möjlighet att varva ner, tanka energi och återhämtning.</p>
             </div>
         </section>
             
-        <section class="project-container-row hidden">
-            <article class="project-card hidden">
+        <section class="project-container-row">
+            <article class="project-card">
                 <div class="project-header">
                     <h2>Skiss och planering</h2>
                     <p>Planeringen började med skisser i Figma för att få en överblick över hur appen skulle se ut. Därefter skapades wireframe för att planera layout och funktionalitet. En enkel och tydlig navigering för att underlätta för användaren.</p>
                 </div>
-                    <img class="project-img hidden" src="img/skissmobile.png" alt="mobile">
-                    <img class="project-img hidden" src="img/skissdesktop.png" alt="desktop">
+                    <img class="project-img" src="img/skissmobile.png" alt="mobile">
+                    <img class="project-img" src="img/skissdesktop.png" alt="desktop">
             </article>
 
-            <article class="project-card hidden">
+            <article class="project-card">
                 <div class="project-header">
                     <h2>Design</h2>
-                    <p>Ett färg- och typografi-moodboard för att hitta rätt känsla för appen. Mjuka, naturnära färger och lättlästa typsnitt för att skapa en inbjudande och harmonisk känsla. Logotyp för att förstärka appens identitet.</p>
+                    <p>Ett färg- och typografi-moodboard för att hitta rätt känsla för appen. Mjuka, naturnära färger och lättlästa typsnitt för att skapa en inbjudande och harmonisk känsla.</p>
                 </div>
-                    <img class="project-img hidden" src="img/color.png" alt="color">
-                    <img class="project-img hidden" src="img/typescript.png" alt="typography">
+                    <img class="project-img" src="img/color.png" alt="color">
+                    <img class="project-img" src="img/typescript.png" alt="typography">
             </article>
-        </section>
-
-            <section class="project-card">
-                <div class="project-header">
-                    <h2>Prototyp</h2>
-                </div>
-                    <div class="project hidden">
-                        <div class="row">
-                            <h3>Vit/Blå</h3>
-                            <button class="toggle-btn">+</button>
-                        </div>
-                    <div class="project-details" style="display: none;">
-                        <div class="media-wrap">
-                            <p>En ren och modern design där vitt och blått ger ett intryck av stabilitet, harmoni och enkelhet. Den blå färgen förstärker känslan av trygghet, medan den vita bakgrunden ger tydlighet och professionalitet.</p>
-                            <button class="project-btn">
-                                <a href="https://www.figma.com/proto/1mlhuHdmKI0ZTOGpLe5vM3/Stalltid-app-v.1.1-(Copy)?page-id=18%3A2&node-id=18-272&p=f&viewport=-125%2C323%2C0.1&t=4hB8mE7c9jlzo7tB-1&scaling=scale-down&content-scaling=fixed" target="_blank">Se prototypen här</a>
-                            </button>
-                                <img class="project-img hidden" src="img/projects/project1/1.png" alt="">
-                                <img class="project-img hidden" src="img/projects/project1/2.png" alt="">
-                                <img class="project-img hidden" src="img/projects/project1/3.png" alt="">
-                                <img class="project-img hidden" src="img/projects/project1/4.png" alt="">
-                        </div>
-
-                    </div>
-
-                    <div class="project hidden">
-                        <div class="row">
-                            <h3>Grön/Gul/Beige</h3>
-                            <button class="toggle-btn">+</button>
-                        </div>
-                    <div class="project-details" style="display: none;">
-                        <div class="media-wrap">
-                            <p>Detta färgtema skapades för att återspegla energi och jordnära lugn. Kombinationen av dessa färger framhäver kopplingen till naturen och förmedlar en varm och välkomnande känsla.</p>
-                            <button class="project-btn">
-                                <a href="https://www.figma.com/proto/1mlhuHdmKI0ZTOGpLe5vM3/Stalltid-app-v.1.1-(Copy)?page-id=150%3A674&node-id=150-1273&p=f&viewport=57%2C433%2C0.11&t=cKarFlHvktzSlXmk-1&scaling=scale-down&content-scaling=fixed" target="_blank">Se prototypen här</a>
-                            </button>
-
-                            <img class="project-img hidden" src="img/projects/project1/5.png" alt="">
-                            <img class="project-img hidden" src="img/projects/project1/6.png" alt="">
-                            <img class="project-img hidden" src="img/projects/project1/7.png" alt="">
-                            <img class="project-img hidden" src="img/projects/project1/8.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="project hidden">
-                        <div class="row">
-                            <h3>Grön/Gul</h3>
-                            <button class="toggle-btn">+</button>
-                        </div>
-                    <div class="project-details" style="display: none;">
-                        <div class="media-wrap">
-                            <p>Med fokus på naturliga toner av grönt och gult ville vi spegla lugnet och harmonin som förknippas med hästupplevelser. Designen är lekfull och lättnavigerad, vilket gör det enkelt för användare att boka sin upplevelse.</p>
-                            <button class="project-btn">
-                                <a href="https://www.figma.com/proto/1mlhuHdmKI0ZTOGpLe5vM3/Stalltid-app-v.1.1-(Copy)?page-id=126%3A674&node-id=110-795&p=f&viewport=209%2C395%2C0.05&t=g46MHDKNV7TOknhH-1&scaling=scale-down&content-scaling=fixed" target="_blank">Se prototypen här</a>
-                            </button>
-                            <img class="project-img hidden" src="img/projects/project1/9.png" alt="">
-                            <img class="project-img hidden" src="img/projects/project1/10.png" alt="">
-                            <img class="project-img hidden" src="img/projects/project1/11.png" alt="">
-                            <img class="project-img hidden" src="img/projects/project1/12.png" alt="">
-                        </div>
-                    </div>
-
-                    <div class="project hidden">
-                        <div class="row">
-                            <h3>Slutgiltlig design</h3>
-                            <button class="toggle-btn">+</button>
-                        </div>
-                    <div class="project-details" style="display: none;">
-                        <button class="project-btn">
-                            <a href="https://www.figma.com/proto/8mIqncMmlUloP5YrlgQa56/Projekt%3A-Stalltid?page-id=0%3A1&node-id=1-664&p=f&viewport=170%2C188%2C0.07&t=rppXdEwoDp5jpRkq-1&scaling=scale-down&content-scaling=fixed" target="_blank">Prototyp desktop</a>
-                        </button>
-
-                        <button class="project-btn">
-                            <a href="https://www.figma.com/proto/8mIqncMmlUloP5YrlgQa56/Projekt%3A-Stalltid?page-id=1%3A1285&node-id=1-1877&p=f&viewport=393%2C327%2C0.06&t=McdOXKUVNnSI5I1t-1&scaling=scale-down&content-scaling=fixed" target="_blank">Prototyp mobile</a>
-                        </button>
-                        <img class="project-img hidden" src="img/projects/project1/13.png" alt="">
-                        <img class="project-img hidden" src="img/projects/project1/14.png" alt="">
-                        <img class="project-img hidden" src="img/projects/project1/15.png" alt="">
-                        <img class="project-img hidden" src="img/projects/project1/16.png" alt="">
-                        <img class="project-img hidden" src="img/projects/project1/17.png" alt="">
-                        <img class="project-img hidden" src="img/projects/project1/18.png" alt="">
-                    </div>
         </section>
 
         <section class="info-container">
@@ -153,21 +75,108 @@
                 <li>Grupparbete</li>
                 <li>Dokumentation</li>
                 <li>Visuell design</li>
-                <li>Analytisk förmåga</li>
-                <li>Designmönster</li>
-                <li>Projektplanering</li>
-                <li>Typografi</li>
-                <li>Färgteori</li>
-                <li>Användarorienterad design</li>
-                <li>Web Content Accessibility Guidelines (WCAG)</li>
-                <li>Prototyping</li>
             </ul>
         </section>
-
     </main>
+
     <footer>
         <p>&copy; 2025 My Brindesjö. All rights reserved.</p>
     </footer>
+
     <script src="scripts.js"></script>
+    <script>
+        const themeToggle = document.getElementById("lightmode-icon");
+                const savedTheme = localStorage.getItem("theme") || "light"; // Standard: ljust läge
+
+                // Ställ in tema vid laddning
+                document.body.classList.add(savedTheme + "-mode");
+                themeToggle.src = savedTheme === "light" ? "img/lightmode.png" : "img/darkmode.png";
+
+                // Toggla mellan mörkt och ljust läge
+                themeToggle.addEventListener("click", () => {
+                    const currentTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
+                    const newTheme = currentTheme === "light" ? "dark" : "light";
+                    
+                    // Byt tema
+                    document.body.classList.remove(currentTheme + "-mode");
+                    document.body.classList.add(newTheme + "-mode");
+                    
+                    // Uppdatera ikon
+                    themeToggle.src = newTheme === "light" ? "img/lightmode.png" : "img/darkmode.png";
+                    
+                    // Spara tema i localStorage
+                    localStorage.setItem("theme", newTheme);
+                });
+
+
+        const translations = {
+            sv: {
+                home: "Hem",
+                about: "Om mig",
+                projects: "Projekt",
+                contact: "Kontakt",
+                intro: "En fiktiv app för bokning av hästupplevelser. Vem har inte velat fly vardagen och uppleva en mysig turridning med våra fyrbenta vänner? Perfekt möjlighet att varva ner, tanka energi och återhämtning.",
+                projectTitle1: "Skiss och planering",
+                projectText1: "Planeringen började med skisser i Figma för att få en överblick över hur appen skulle se ut. Därefter skapades wireframe för att planera layout och funktionalitet. En enkel och tydlig navigering för att underlätta för användaren.",
+                projectTitle2: "Design",
+                projectText2: "Ett färg- och typografi-moodboard för att hitta rätt känsla för appen. Mjuka, naturnära färger och lättlästa typsnitt för att skapa en inbjudande och harmonisk känsla.",
+                skillsTitle: "Kompetenser"
+            },
+            en: {
+                home: "Home",
+                about: "About Me",
+                projects: "Projects",
+                contact: "Contact",
+                intro: "A fictional app for booking horse experiences. Who hasn't wanted to escape everyday life and enjoy a cozy horseback ride with our four-legged friends? A perfect opportunity to unwind, recharge, and recover.",
+                projectTitle1: "Sketch and Planning",
+                projectText1: "Planning started with sketches in Figma to get an overview of how the app would look. Then wireframes were created to plan layout and functionality. Simple and clear navigation to make it easier for the user.",
+                projectTitle2: "Design",
+                projectText2: "A color and typography mood board to find the right feel for the app. Soft, nature-inspired colors and legible fonts to create an inviting and harmonious feel.",
+                skillsTitle: "Skills"
+            }
+        };
+
+        const languageBtn = document.getElementById("language-btn");
+        const elementsToTranslate = {
+            home: document.querySelector("a[href='index.html']"),
+            about: document.querySelector("a[href='about.html']"),
+            projects: document.querySelector("a[href='projects.html']"),
+            contact: document.querySelector("a[href='contact.html']"),
+            intro: document.querySelector(".intro-card p"),
+            projectTitle1: document.querySelectorAll(".project-header h2")[0],
+            projectText1: document.querySelectorAll(".project-card p")[0],
+            projectTitle2: document.querySelectorAll(".project-header h2")[1],
+            projectText2: document.querySelectorAll(".project-card p")[1],
+            skillsTitle: document.querySelector(".info-container h2")
+        };
+
+        function setLanguage(lang) {
+            const translation = translations[lang];
+            Object.keys(elementsToTranslate).forEach(key => {
+                const element = elementsToTranslate[key];
+                if (element) {
+                    element.textContent = translation[key];
+                }
+            });
+            localStorage.setItem("language", lang);
+
+            // Uppdatera knappens innehåll och flagga
+            languageBtn.innerHTML = lang === "sv"
+                ? `EN 🇬🇧`
+                : `SV 🇸🇪`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedLanguage = localStorage.getItem("language") || "sv";
+            setLanguage(savedLanguage);
+        });
+
+        languageBtn.addEventListener("click", () => {
+            const currentLang = localStorage.getItem("language") || "sv";
+            const newLang = currentLang === "sv" ? "en" : "sv";
+            setLanguage(newLang);
+        });
+    </script>
 </body>
 </html>
+

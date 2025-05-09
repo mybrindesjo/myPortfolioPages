@@ -121,15 +121,23 @@ nav {
     margin-top: 1rem;
 }
 
-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    display: flex;
+.social-img:hover {
+    transform: scale(1.1);
 }
 
-social-img:hover {
-    transform: scale(1.1);
+.toggle-icons-top {
+    display: flex;
+    gap: 1rem;
+    justify-content: right;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.toggle-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .intro, .info-container {
@@ -607,6 +615,27 @@ body.dark-mode .form {
     transform: translateY(0);
 }
 
+.language-toggle {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#language-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#language-btn:hover {
+    background-color: #e0e0e0;
+}
 .skills li, .experience-card, .project-info, .project-img {
     opacity: 0;
     transform: translateX(50px); /* flytta in från höger */
@@ -648,7 +677,7 @@ body.dark-mode .form {
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .menu-toggle {
         display: flex;
     }

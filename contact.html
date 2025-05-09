@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Brindesjö</title>
+    <title data-sv="My Brindesjö" data-en="My Brindesjö">My Brindesjö</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/profilePicture.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,24 +18,33 @@
                 <span class="bar"></span>
             </div>
             <ul class="nav-links">
-                <li><a class="nav-link" href="index.html">Hem</a></li>
-                <li><a class="nav-link" href="about.html">Om mig</a></li>
-                <li><a class="nav-link" href="projects.html">Projekt</a></li>
-                <li><a class="nav-link" href="contact.html">Kontakt</a></li>
+                <li><a class="nav-link" href="index.html" data-sv="Hem" data-en="Home">Hem</a></li>
+                <li><a class="nav-link" href="about.html" data-sv="Om mig" data-en="About Me">Om mig</a></li>
+                <li><a class="nav-link" href="projects.html" data-sv="Projekt" data-en="Projects">Projekt</a></li>
+                <li><a class="nav-link" href="contact.html" data-sv="Kontakt" data-en="Contact">Kontakt</a></li>
             </ul>
-            <div class="lamp-toggle">
-                <img id="lamp-icon" src="img/lamp-on.png" alt="Lamp Icon" width="40" height="40">
-            </div>
+            <section class="toggle-icons">
+                <div class="themmode-toggle">
+                    <img src="img/lightmode.png" alt="Light Mode" id="lightmode-icon">
+                </div>
+                <div class="language-toggle">
+                    <button id="language-btn">EN 🇬🇧</button>
+                </div>
+            </section>
         </nav>
     </header>
+
     <main>
         <section class="intro hidden">
-            <h1>Kontakta mig</h1>
-            <p>Jag är alltid öppen för nya möjligheter och samarbeten. Om du har några frågor eller vill diskutera ett projekt, tveka inte att höra av dig!</p>
-            
+            <h1 data-sv="Kontakta mig" data-en="Contact Me">Kontakta mig</h1>
+            <p data-sv="Jag är alltid öppen för nya möjligheter och samarbeten. Om du har några frågor eller vill diskutera ett projekt, tveka inte att höra av dig!"
+               data-en="I am always open to new opportunities and collaborations. If you have any questions or want to discuss a project, feel free to reach out!">
+               Jag är alltid öppen för nya möjligheter och samarbeten...
+            </p>
+
             <div class="social-links hidden">
                 <a href="mailto:my.brindesjo@gmail.com">
-                    <img src="img/gmail.png" alt="Figma" class="social-img" width="50" height="50">
+                    <img src="img/gmail.png" alt="Gmail" class="social-img" width="50" height="50">
                 </a>
                 <a href="https://github.com/mybrindesjo?tab=repositories" target="_blank">
                     <img src="img/github.png" alt="Github" class="social-img" width="50" height="50">
@@ -45,25 +54,85 @@
                 </a>
             </div>
 
-        <form class="contact-form hidden" method="POST" data-netlify="true" name="contact">
-            <h1>Kontakta mig</h1>
-            <label for="name">Namn:</label>
-            <input placeholder="Ditt namn" type="text" id="name" name="name" required>
+            <form class="contact-form hidden" method="POST" data-netlify="true" name="contact">
+                <h1 data-sv="Kontakta mig" data-en="Contact Me">Kontakta mig</h1>
+                
+                <label for="name" data-sv="Namn:" data-en="Name:">Namn:</label>
+                <input id="name" name="name" type="text" required placeholder="Ditt namn" data-sv-placeholder="Ditt namn" data-en-placeholder="Your name">
 
-            <label for="email">E-post:</label>
-            <input placeholder="Din e-postadress" type="email" id="email" name="email" required>
+                <label for="email" data-sv="E-post:" data-en="Email:">E-post:</label>
+                <input id="email" name="email" type="email" required placeholder="Din e-postadress" data-sv-placeholder="Din e-postadress" data-en-placeholder="Your email address">
 
-            <label for="message">Meddelande:</label>
-            <textarea placeholder="Ditt meddelande" id="message" name="message" rows="10" required></textarea>
+                <label for="message" data-sv="Meddelande:" data-en="Message:">Meddelande:</label>
+                <textarea id="message" name="message" rows="10" required placeholder="Ditt meddelande" data-sv-placeholder="Ditt meddelande" data-en-placeholder="Your message"></textarea>
 
-            <button type="submit">Skicka</button>
-        </form>
-
-
+                <button type="submit" data-sv="Skicka" data-en="Send">Skicka</button>
+            </form>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 My Brindesjö. All rights reserved.</p>
+        <p data-sv="&copy; 2025 My Brindesjö. Alla rättigheter förbehållna." data-en="&copy; 2025 My Brindesjö. All rights reserved.">
+            &copy; 2025 My Brindesjö. Alla rättigheter förbehållna.
+        </p>
     </footer>
+
     <script src="scripts.js"></script>
+    <script>
+        const themeToggle = document.getElementById("lightmode-icon");
+                const savedTheme = localStorage.getItem("theme") || "light"; // Standard: ljust läge
+
+                // Ställ in tema vid laddning
+                document.body.classList.add(savedTheme + "-mode");
+                themeToggle.src = savedTheme === "light" ? "img/lightmode.png" : "img/darkmode.png";
+
+                // Toggla mellan mörkt och ljust läge
+                themeToggle.addEventListener("click", () => {
+                    const currentTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
+                    const newTheme = currentTheme === "light" ? "dark" : "light";
+                    
+                    // Byt tema
+                    document.body.classList.remove(currentTheme + "-mode");
+                    document.body.classList.add(newTheme + "-mode");
+                    
+                    // Uppdatera ikon
+                    themeToggle.src = newTheme === "light" ? "img/lightmode.png" : "img/darkmode.png";
+                    
+                    // Spara tema i localStorage
+                    localStorage.setItem("theme", newTheme);
+                });
+
+        const languageBtn = document.getElementById("language-btn");
+
+        function setLanguage(lang) {
+            const translatableElements = document.querySelectorAll("[data-sv][data-en]");
+            translatableElements.forEach(el => {
+                if (el.placeholder !== undefined) {
+                    const translatedPlaceholder = el.getAttribute(`data-${lang}-placeholder`);
+                    if (translatedPlaceholder) {
+                        el.placeholder = translatedPlaceholder;
+                    }
+                } else {
+                    const translation = el.getAttribute(`data-${lang}`);
+                    if (translation) {
+                        el.textContent = translation;
+                    }
+                }
+            });
+            languageBtn.innerHTML = lang === "sv" ? `EN 🇬🇧` : `SV 🇸🇪`;
+            localStorage.setItem("language", lang);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedLanguage = localStorage.getItem("language") || "sv";
+            setLanguage(savedLanguage);
+        });
+
+        languageBtn.addEventListener("click", () => {
+            const currentLang = localStorage.getItem("language") || "sv";
+            const newLang = currentLang === "sv" ? "en" : "sv";
+            setLanguage(newLang);
+        });
+    </script>
 </body>
 </html>

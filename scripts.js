@@ -82,26 +82,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
     hiddenElements.forEach(element => observer.observe(element));
 });
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const skillItems = document.querySelectorAll(".skills li");
-  
-    skillItems.forEach((item, index) => {
-      item.style.animationDelay = `${index * 0.50}s`; // 150ms mellan varje
-      item.classList.add("show");
-    });
-  });
-
-  const lampIcon = document.getElementById('lamp-icon');
-  if (localStorage.getItem('darkMode') === 'true') {
-      document.body.classList.add('dark-mode');
-      lampIcon.src = 'img/lamp-off.png';
-  }
-
-  lampIcon.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      const isDarkMode = document.body.classList.contains('dark-mode');
-      lampIcon.src = isDarkMode ? 'img/lamp-off.png' : 'img/lamp-on.png';
-      localStorage.setItem('darkMode', isDarkMode);
-  });

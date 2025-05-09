@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,20 +18,23 @@
                 <span class="bar"></span>
             </div>
             <ul class="nav-links">
-                <li><a class="nav-link" href="index.html">Hem</a></li>
-                <li><a class="nav-link" href="about.html">Om mig</a></li>
-                <li><a class="nav-link" href="projects.html">Projekt</a></li>
-                <li><a class="nav-link" href="contact.html">Kontakt</a></li>
-
+                <li><a class="nav-link" href="index.html" data-translate="home">Hem</a></li>
+                <li><a class="nav-link" href="about.html" data-translate="about">Om mig</a></li>
+                <li><a class="nav-link" href="projects.html" data-translate="projects">Projekt</a></li>
+                <li><a class="nav-link" href="contact.html" data-translate="contact">Kontakt</a></li>
             </ul>
-            <div class="lamp-toggle">
-                <img id="lamp-icon" src="img/lamp-on.png" alt="Lamp Icon" width="40" height="40">
-            </div>
+            <section class="toggle-icons">
+                <div class="themmode-toggle">
+                    <img src="img/lightmode.png" alt="Light Mode" id="lightmode-icon">
+                </div>
+                <div class="language-toggle">
+                    <button id="language-btn">EN 🇬🇧</button>
+                </div>
+            </section>
         </nav>
     </header>
 
     <main>
-        
         <section class="intro-card hidden">
             <img class="me-picture" src="img/my.jpeg" alt="me-picture" width="600" height="400">
             <div class="media-column">
@@ -45,7 +48,7 @@
 
         <div class="media-row hidden">
             <section class="info-container hidden">
-                <h2>Utbildning</h2>
+                <h2 data-translate="education">Utbildning</h2>
                 <article class="info-card hidden">
                     <img src="img/chasacademy.jpeg" alt="Chas Academy"> 
                     <div class="info-text">
@@ -65,7 +68,7 @@
                         </ul>
                     </div>
                 </article>
-    
+
                 <article class="info-card hidden">
                     <img src="img/sodra.png" alt="High School"> 
                     <div class="info-text">
@@ -74,7 +77,7 @@
                         <p>2023 - 2024</p>
                     </div>
                 </article>
-    
+
                 <article class="info-card hidden">
                     <img src="img/bollerup.png" alt="Bollerup"> 
                     <div class="info-text">                
@@ -82,9 +85,11 @@
                         <p>Samhällskunskap med inriktning häst</p>
                         <p>2021 - 2023</p>
                     </div>
+                </article>
             </section>
+
             <section class="info-container hidden">
-                <h2>Arbetslivserfarenhet</h2>
+                <h2 data-translate="work_experience">Arbetslivserfarenhet</h2>
                 <article class="info-card hidden">
                     <img src="img/skansen_logo.jpeg" alt="skansen_logo" width="100" height="100">
                     <div class="info-text">
@@ -93,7 +98,7 @@
                         <p>nov. 2023 – nu</p>
                     </div>
                 </article>
-    
+
                 <article class="info-card hidden">
                     <img src="img/strangnaskommun.png" alt="strangnaskommun_logo">
                     <div class="info-text">
@@ -102,7 +107,7 @@
                         <p>apr. 2024 - aug. 2024</p>
                     </div>
                 </article>
-    
+
                 <article class="info-card hidden">
                     <img src="img/bollerup.png" alt="bollerups_logo">
                     <div class="info-text">                
@@ -112,45 +117,43 @@
                     </div>
                 </article>
             </section>
-            </div>
-       
-        <section class="info-container hidden">
-            <h2>Erfarenheter</h2>
-        <div class="media-row hidden">
-            <article class="experience-card hidden">
-                <h3>Sportkörning på elitnivå</h3>
-                <div class="description">
-                    <p>Under 2023 hade jag förmånen att vara lärling i sportkörningslandslaget. 
-                    I rollen som hästskötare och groom deltog jag i internationella tävlingar 
-                    och världsmästerskap. Denna tid lärde mig att arbeta under press, vara 
-                    flexibel och samarbeta i högpresterande team.</p>
-                </div>
-            </article>
-
-            <article class="experience-card hidden">
-                <h3>Erfarenhet inom hästnäringen</h3>
-                <div class="description">
-                    <p>Jag har praktiserat och arbetat i flera stall, alltid med goda resultat och höga 
-                    krav på kvalitet. Dessa erfarenheter har stärkt min organisationsförmåga.</p>
-                </div>
-            </article>
-
-            <article class="experience-card hidden">
-                <h3>Ledarskap och engagemang</h3>
-                <div class="description">
-                    <p>Mitt ledarskap har utvecklats genom min roll som hjälpledare för en scoutgrupp, 
-                    där jag också genomgått flera ledarskapsutbildningar. Jag har dessutom varit 
-                    engagerad i ridklubbens ungdomssektion, där jag fick ytterligare 
-                    träning i att leda och inspirera andra.</p>
-                </div>
-            </article>
-
-
         </div>
+
+        <section class="info-container hidden">
+            <h2 data-translate="experiences">Erfarenheter</h2>
+            <div class="media-row hidden">
+                <article class="experience-card hidden">
+                    <h3>Sportkörning på elitnivå</h3>
+                    <div class="description">
+                        <p>Under 2023 hade jag förmånen att vara lärling i sportkörningslandslaget. 
+                        I rollen som hästskötare och groom deltog jag i internationella tävlingar 
+                        och världsmästerskap. Denna tid lärde mig att arbeta under press, vara 
+                        flexibel och samarbeta i högpresterande team.</p>
+                    </div>
+                </article>
+
+                <article class="experience-card hidden">
+                    <h3>Erfarenhet inom hästnäringen</h3>
+                    <div class="description">
+                        <p>Jag har praktiserat och arbetat i flera stall, alltid med goda resultat och höga 
+                        krav på kvalitet. Dessa erfarenheter har stärkt min organisationsförmåga.</p>
+                    </div>
+                </article>
+
+                <article class="experience-card hidden">
+                    <h3>Ledarskap och engagemang</h3>
+                    <div class="description">
+                        <p>Mitt ledarskap har utvecklats genom min roll som hjälpledare för en scoutgrupp, 
+                        där jag också genomgått flera ledarskapsutbildningar. Jag har dessutom varit 
+                        engagerad i ridklubbens ungdomssektion, där jag fick ytterligare 
+                        träning i att leda och inspirera andra.</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
         <section class="info-container hidden">
-            <h2>Kompetenser</h2>
+            <h2 data-translate="skills">Kompetenser</h2>
             <ul class="skills hidden">
                 <li>Figma</li>
                 <li>HTML & CSS</li>
@@ -199,14 +202,119 @@
                 <li>Terränghjuling</li>
                 <li>Scoutledare</li>
                 <li>Vård och omsorg</li>
-                <li>Städning</li>
-            </ul>
+                <li>Städning</li>            </ul>
         </section>
-
     </main>
+
     <footer>
         <p>&copy; 2025 My Brindesjö. All rights reserved.</p>
     </footer>
+
     <script src="scripts.js"></script>
+    <script>
+        const themeToggle = document.getElementById("lightmode-icon");
+        const savedTheme = localStorage.getItem("theme") || "light"; // Standard: ljust läge
+
+        // Ställ in tema vid laddning
+        document.body.classList.add(savedTheme + "-mode");
+        themeToggle.src = savedTheme === "light" ? "img/lightmode.png" : "img/darkmode.png";
+
+        // Toggla mellan mörkt och ljust läge
+        themeToggle.addEventListener("click", () => {
+            const currentTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+            
+            // Byt tema
+            document.body.classList.remove(currentTheme + "-mode");
+            document.body.classList.add(newTheme + "-mode");
+            
+            // Uppdatera ikon
+            themeToggle.src = newTheme === "light" ? "img/lightmode.png" : "img/darkmode.png";
+            
+            // Spara tema i localStorage
+            localStorage.setItem("theme", newTheme);
+        });
+
+        const translations = {
+            sv: {
+                home: "Hem",
+                about: "Om mig",
+                projects: "Projekt",
+                contact: "Kontakt",
+                introTitle: "Vem är jag?",
+                introSubtitle: "Frontendutvecklare och UX/UI-designer, bred erfarenhet och starkt driv!",
+                introParagraph1: "Jag har arbetat med en rad olika projekt, från skolprojekt till företagsprojekt, för att skapa användarvänliga och estetiskt tilltalande webbapplikationer.",
+                introParagraph2: "Med en bakgrund inom sportkörning på elitnivå har jag lärt mig att arbeta under press, vara flexibel och samarbeta effektivt i högpresterande team. Jag har också en gedigen erfarenhet inom hästnäringen, vilket har stärkt min organisationsförmåga.",
+                introParagraph3: "Utöver mitt arbete som utvecklare är jag engagerad i att ständigt förbättra mina färdigheter och hålla mig uppdaterad med de senaste trenderna inom teknik och design. På fritiden tycker jag om att rida, läsa och utforska nya teknologier.",
+                education: "Utbildning",
+                work_experience: "Arbetslivserfarenhet",
+                skills: "Kompetenser",
+                experiences: "Erfarenheter"
+            },
+            en: {
+                home: "Home",
+                about: "About Me",
+                projects: "Projects",
+                contact: "Contact",
+                introTitle: "Who am I?",
+                introSubtitle: "Frontend Developer and UX/UI Designer, broad experience and strong drive!",
+                introParagraph1: "I have worked on a variety of projects, from school projects to corporate projects, to create user-friendly and aesthetically pleasing web applications.",
+                introParagraph2: "With a background in competitive driving at an elite level, I have learned to work under pressure, be flexible, and collaborate effectively in high-performing teams. I also have extensive experience in the equestrian industry, which has strengthened my organizational skills.",
+                introParagraph3: "In addition to my work as a developer, I am committed to continuously improving my skills and staying updated with the latest trends in technology and design. In my free time, I enjoy horseback riding, reading, and exploring new technologies.",
+                education: "Education",
+                work_experience: "Work Experience",
+                skills: "Skills",
+                experiences: "Experiences"
+            }
+        };
+
+        const languageBtn = document.getElementById("language-btn");
+        const elementsToTranslate = {
+            home: document.querySelector("a[data-translate='home']"),
+            about: document.querySelector("a[data-translate='about']"),
+            projects: document.querySelector("a[data-translate='projects']"),
+            contact: document.querySelector("a[data-translate='contact']"),
+            introTitle: document.querySelector(".intro-card h1"),
+            introSubtitle: document.querySelector(".intro-card h2"),
+            introParagraph1: document.querySelector(".intro-card p:nth-of-type(1)"),
+            introParagraph2: document.querySelector(".intro-card p:nth-of-type(2)"),
+            introParagraph3: document.querySelector(".intro-card p:nth-of-type(3)"),
+            education: document.querySelector("h2[data-translate='education']"),
+            work_experience: document.querySelector("h2[data-translate='work_experience']"),
+            skills: document.querySelector("h2[data-translate='skills']"),
+            experiences: document.querySelector("h2[data-translate='experiences']")
+        };
+
+        function setLanguage(lang) {
+            const translation = translations[lang];
+            Object.keys(elementsToTranslate).forEach(key => {
+                const element = elementsToTranslate[key];
+                if (element) {
+                    if (key.includes("Paragraph")) {
+                        element.textContent = translation[key];
+                    } else {
+                        element.textContent = translation[key];
+                    }
+                }
+            });
+            localStorage.setItem("language", lang);
+
+            // Uppdatera knappens innehåll och flagga
+            languageBtn.innerHTML = lang === "sv"
+                ? `EN 🇬🇧`
+                : `SV 🇸🇪`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedLanguage = localStorage.getItem("language") || "sv";
+            setLanguage(savedLanguage);
+        });
+
+        languageBtn.addEventListener("click", () => {
+            const currentLang = localStorage.getItem("language") || "sv";
+            const newLang = currentLang === "sv" ? "en" : "sv";
+            setLanguage(newLang);
+        });
+    </script>
 </body>
 </html>

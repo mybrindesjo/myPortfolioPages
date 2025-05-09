@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,17 +22,21 @@
                 <li><a class="nav-link" href="about.html">Om mig</a></li>
                 <li><a class="nav-link" href="projects.html">Projekt</a></li>
                 <li><a class="nav-link" href="contact.html">Kontakt</a></li>
-
             </ul>
-            <div class="lamp-toggle">
-                <img id="lamp-icon" src="img/lamp-on.png" alt="Lamp Icon" width="40" height="40">
-            </div>
+            <section class="toggle-icons">
+                <div class="themmode-toggle">
+                    <img src="img/lightmode.png" alt="Light Mode" id="lightmode-icon">
+                </div>
+                <div class="language-toggle">
+                    <button id="language-btn">EN 🇬🇧</button>
+                </div>
+            </section>
         </nav>
     </header>
 
     <main>
-        <section class="project-container hidden">
-            <h1>Mina projekt</h1>
+        <section class="project-container">
+            <h1 id="projects-title">Mina projekt</h1>
             <div class="project-cards-wrapper">
                 <article class="project-info">
                     <a href="stalltid.html">
@@ -48,9 +52,72 @@
             </div>
         </section>
     </main>
+    
     <footer>
         <p>&copy; 2025 My Brindesjö. All rights reserved.</p>
     </footer>
-    <script src="scripts.js"></script>
+    
+    <script>
+        const themeToggle = document.getElementById("lightmode-icon");
+                const savedTheme = localStorage.getItem("theme") || "light"; // Standard: ljust läge
+
+                // Ställ in tema vid laddning
+                document.body.classList.add(savedTheme + "-mode");
+                themeToggle.src = savedTheme === "light" ? "img/lightmode.png" : "img/darkmode.png";
+
+                // Toggla mellan mörkt och ljust läge
+                themeToggle.addEventListener("click", () => {
+                    const currentTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
+                    const newTheme = currentTheme === "light" ? "dark" : "light";
+                    
+                    // Byt tema
+                    document.body.classList.remove(currentTheme + "-mode");
+                    document.body.classList.add(newTheme + "-mode");
+                    
+                    // Uppdatera ikon
+                    themeToggle.src = newTheme === "light" ? "img/lightmode.png" : "img/darkmode.png";
+                    
+                    // Spara tema i localStorage
+                    localStorage.setItem("theme", newTheme);
+                });
+
+
+        const languageBtn = document.getElementById("language-btn");
+
+        const translations = {
+            sv: {
+                projectsTitle: "Mina projekt"
+            },
+            en: {
+                projectsTitle: "My Projects"
+            }
+        };
+
+        const elementsToTranslate = {
+            projectsTitle: document.getElementById("projects-title")
+        };
+
+        function setLanguage(lang) {
+            const translation = translations[lang];
+            Object.entries(elementsToTranslate).forEach(([key, el]) => {
+                if (el && translation[key]) {
+                    el.textContent = translation[key];
+                }
+            });
+            localStorage.setItem("language", lang);
+            languageBtn.innerHTML = lang === "sv" ? `EN 🇬🇧` : `SV 🇸🇪`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedLanguage = localStorage.getItem("language") || "sv";
+            setLanguage(savedLanguage);
+        });
+
+        languageBtn.addEventListener("click", () => {
+            const currentLang = localStorage.getItem("language") || "sv";
+            const newLang = currentLang === "sv" ? "en" : "sv";
+            setLanguage(newLang);
+        });
+    </script>
 </body>
 </html>
