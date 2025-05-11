@@ -138,7 +138,6 @@ nav {
 .toggle-icons {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
 }
 
 .intro, .info-container {
@@ -595,7 +594,7 @@ body.dark-mode {
 }
 
 body.dark-mode .navbar {
-    background: rgba(0, 0, 0, 0.9);
+    background: #333;
 }
 
 body.dark-mode .form {
