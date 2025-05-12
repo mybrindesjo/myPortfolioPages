@@ -1,118 +1,134 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-sv="My Brindesjö" data-en="My Brindesjö">My Brindesjö</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="img/profilePicture.jpg" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-="My Brindesjö" data-en="My Brindesjö">My Brindesjö</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/profilePicture.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-  <header>
-    <section class="toggle-icons-top">
-      <div class="themmode-toggle">
-        <img src="img/darkmode.png" alt="Toggle Theme" id="theme-toggle-icon" />
-      </div>
-      <div class="language-toggle">
-        <button id="language-btn">🇬🇧</button>
-      </div>
-    </section>
+    <header>
+        <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.html">Hem</a></li>
+                <li><a class="nav-link" href="about.html">Om mig</a></li>
+                <li><a class="nav-link" href="projects.html">Projekt</a></li>
+                <li><a class="nav-link" href="contact.html">Kontakt</a></li>
+            </ul>
+            <section class="toggle-icons">
+                <div class="themmode-toggle">
+                    <img src="img/darkmode.png" alt="Dark Mode" id="darkmode-icon">
+                </div>
+                <div class="language-toggle">
+                    <button id="language-btn">🇬🇧</button>
+                </div>
+            </section>
+        </nav>
 
-    <section class="container">
-      <div class="profile-picture">
-        <img src="img/profilePicture.jpg" alt="Profile Picture" width="150" height="150" />
-      </div>
+        <section class="container">
+            <div class="profile-picture">
+                <img src="img/profilePicture.jpg" alt="Profile Picture" width="150" height="150">
+            </div>
+            
+            <div class="column">
+                <div class="about-intro">
+                    <h1 class="name" data-="My Brindesjö" data-en="My Brindesjö">My Brindesjö</h1>
+                    <h3 class="username" data-="@mybrindesjo" data-en="@mybrindesjo">@mybrindesjo</h3>
+                    <p class="description" data-="💡 ⎸ UX-designer" data-en="💡 ⎸ UX Designer">💡 ⎸ UX-designer</p>
+                    <p class="description" data-="🎨 ⎸ UI-designer" data-en="🎨 ⎸ UI Designer">🎨 ⎸ UI-designer</p>
+                    <p class="description" data-="👩🏼‍💻 ⎸ Frontendutvecklare" data-en="👩🏼‍💻 ⎸ Frontend Developer">👩🏼‍💻 ⎸ Frontendutvecklare</p>
+                    <p class="description" data-="🛠️ ⎸ Figma och VS Code" data-en="🛠️ ⎸ Figma and VS Code">🛠️ ⎸ Figma och VS Code</p>
+                    <p class="description" data-="🎓 ⎸ Chas Academy" data-en="🎓 ⎸ Chas Academy">🎓 ⎸ Chas Academy</p>
+                    <p class="description" data-="📍 ⎸ Stockholm, erige" data-en="📍 ⎸ Stockholm, Sweden">📍 ⎸ Stockholm, erige</p>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:my.brindesjo@gmail.com">
+                        <img src="img/gmail.png" alt="Gmail" class="social-img" width="50" height="50">
+                    </a>
+                    <a href="https://github.com/mybrindesjo?tab=repositories" target="_blank">
+                        <img src="img/github.png" alt="Github" class="social-img" width="50" height="50">
+                    </a>
+                    <a href="https://www.linkedin.com/in/mybrindesjo/" target="_blank">
+                        <img src="img/linkedin.png" alt="LinkedIn" class="social-img" width="50" height="50">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </header>
 
-      <div class="column">
-        <div class="about-intro">
-          <h1 class="name" data-sv="My Brindesjö" data-en="My Brindesjö">My Brindesjö</h1>
-          <h3 class="username" data-sv="@mybrindesjo" data-en="@mybrindesjo">@mybrindesjo</h3>
-          <p class="description" data-sv="💡 ⎸ UX-designer" data-en="💡 ⎸ UX Designer">💡 ⎸ UX-designer</p>
-          <p class="description" data-sv="🎨 ⎸ UI-designer" data-en="🎨 ⎸ UI Designer">🎨 ⎸ UI-designer</p>
-          <p class="description" data-sv="👩🏼‍💻 ⎸ Frontendutvecklare" data-en="👩🏼‍💻 ⎸ Frontend Developer">👩🏼‍💻 ⎸ Frontendutvecklare</p>
-          <p class="description" data-sv="🛠️ ⎸ Figma och VS Code" data-en="🛠️ ⎸ Figma and VS Code">🛠️ ⎸ Figma och VS Code</p>
-          <p class="description" data-sv="🎓 ⎸ Chas Academy" data-en="🎓 ⎸ Chas Academy">🎓 ⎸ Chas Academy</p>
-          <p class="description" data-sv="📍 ⎸ Stockholm, Sverige" data-en="📍 ⎸ Stockholm, Sweden">📍 ⎸ Stockholm, Sverige</p>
-        </div>
-        <div class="social-links">
-          <a href="mailto:my.brindesjo@gmail.com">
-            <img src="img/gmail.png" alt="Gmail" class="social-img" width="50" height="50" />
-          </a>
-          <a href="https://github.com/mybrindesjo?tab=repositories" target="_blank">
-            <img src="img/github.png" alt="Github" class="social-img" width="50" height="50" />
-          </a>
-          <a href="https://www.linkedin.com/in/mybrindesjo/" target="_blank">
-            <img src="img/linkedin.png" alt="LinkedIn" class="social-img" width="50" height="50" />
-          </a>
-        </div>
-      </div>
-    </section>
-  </header>
+    <main>
+        <section class="intro">
+            <h1 class="intro-title" data-="Välkommen" data-en="Welcome">Välkommen</h1>
+            <p class="intro-description" data-="Jag är engagerad frontendutvecklare och UX/UI-designer strävar jag efter att skapa användarvänliga och visuellt tilltalande lösningar. Klicka vidare nedan för att läsa mer om mig och utforska mina projekt!" data-en="As a passionate frontend developer and UX/UI designer, I strive to create user-friendly and visually appealing solutions. Click below to learn more about me and explore my projects!">Jag är engagerad frontendutvecklare och UX/UI-designer...</p>
+            <div class="link-row">
+                <li><a class="link-about" href="about.html" data-="Om mig" data-en="About Me">Om mig</a></li>
+                <li><a class="link-project" href="projects.html" data-="Projekt" data-en="Projects">Projekt</a></li>
+                <li><a class="link-contact" href="contact.html" data-="Kontakta mig" data-en="Contact Me">Kontakta mig</a></li>
+            </div>
+        </section>
+    </main>
 
-  <main>
-    <section class="intro">
-      <h1 class="intro-title" data-sv="Välkommen" data-en="Welcome">Välkommen</h1>
-      <p class="intro-description" data-sv="Jag är engagerad frontendutvecklare och UX/UI-designer strävar jag efter att skapa användarvänliga och visuellt tilltalande lösningar. Klicka vidare nedan för att läsa mer om mig och utforska mina projekt!" data-en="As a passionate frontend developer and UX/UI designer, I strive to create user-friendly and visually appealing solutions. Click below to learn more about me and explore my projects!">Jag är engagerad frontendutvecklare och UX/UI-designer...</p>
-      <div class="link-row">
-        <li><a class="link-about" href="about.html" data-sv="Om mig" data-en="About Me">Om mig</a></li>
-        <li><a class="link-project" href="projects.html" data-sv="Projekt" data-en="Projects">Projekt</a></li>
-        <li><a class="link-contact" href="contact.html" data-sv="Kontakta mig" data-en="Contact Me">Kontakta mig</a></li>
-      </div>
-    </section>
-  </main>
+    <footer>
+        <p data-="&copy; 2025 My Brindesjö. Alla rättigheter förbehållna." data-en="&copy; 2025 My Brindesjö. All rights reserved.">&copy; 2025 My Brindesjö. Alla rättigheter förbehållna.</p>
+    </footer>
 
-  <footer>
-    <p data-sv="&copy; 2025 My Brindesjö. Alla rättigheter förbehållna." data-en="&copy; 2025 My Brindesjö. All rights reserved.">&copy; 2025 My Brindesjö. Alla rättigheter förbehållna.</p>
-  </footer>
+    <script src="script.js"></script>
+    <script>
+        const themeToggle = document.getElementById("lightmode-icon");
+        const savedTheme = localStorage.getItem("theme") || "light"; // Standard: ljust läge
 
-  <script>
-    const themeToggle = document.getElementById("theme-toggle-icon");
-    const languageBtn = document.getElementById("language-btn");
+        // Ställ in tema vid laddning
+        document.body.classList.add(savedTheme + "-mode");
+        themeToggle.src = savedTheme === "light" ? "img/darkmode.png" : "img/darkmode.png";
 
-    // Hantera tema
-    const savedTheme = localStorage.getItem("theme") || "light";
-    document.body.classList.add(savedTheme + "-mode");
-    themeToggle.src = savedTheme === "light" ? "img/darkmode.png" : "img/lightmode.png";
+        // Toggla mellan mörkt och ljust läge
+        themeToggle.addEventListener("click", () => {
+            const currentTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+            
+            // Byt tema
+            document.body.classList.remove(currentTheme + "-mode");
+            document.body.classList.add(newTheme + "-mode");
+            
+            // Uppdatera ikon
+            themeToggle.src = newTheme === "light" ? "img/darkmode.png" : "img/darkmode.png";
+            
+            // Spara tema i localStorage
+            localStorage.setItem("theme", newTheme);
+        });
 
-    themeToggle.addEventListener("click", () => {
-      const currentTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
-      const newTheme = currentTheme === "light" ? "dark" : "light";
+        const languageBtn = document.getElementById("language-btn");
 
-      document.body.classList.remove(currentTheme + "-mode");
-      document.body.classList.add(newTheme + "-mode");
+        function setLanguage(lang) {
+            const translatableElements = document.querySelectorAll("[data-][data-en]");
+            translatableElements.forEach(el => {
+                const translation = el.getAttribute(`data-${lang}`);
+                if (translation) {
+                    el.textContent = translation;
+                }
+            });
+            languageBtn.innerHTML = lang === "" ? ` 🇬🇧` : `🇸🇪`;
+            localStorage.setItem("language", lang);
+        }
 
-      themeToggle.style.opacity = 0;
-      setTimeout(() => {
-        themeToggle.src = newTheme === "light" ? "img/darkmode.png" : "img/lightmode.png";
-        themeToggle.style.opacity = 1;
-      }, 200);
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedLanguage = localStorage.getItem("language") || "";
+            setLanguage(savedLanguage);
+        });
 
-      localStorage.setItem("theme", newTheme);
-    });
-
-    // Hantera språk
-    function setLanguage(lang) {
-      const translatableElements = document.querySelectorAll("[data-sv][data-en]");
-      translatableElements.forEach(el => {
-        const translation = el.getAttribute(`data-${lang}`);
-        if (translation) el.textContent = translation;
-      });
-      languageBtn.innerHTML = lang === "sv" ? "🇬🇧" : "🇸🇪";
-      localStorage.setItem("language", lang);
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const savedLanguage = localStorage.getItem("language") || "sv";
-      setLanguage(savedLanguage);
-    });
-
-    languageBtn.addEventListener("click", () => {
-      const currentLang = localStorage.getItem("language") || "sv";
-      const newLang = currentLang === "sv" ? "en" : "sv";
-      setLanguage(newLang);
-    });
-  </script>
+        languageBtn.addEventListener("click", () => {
+            const currentLang = localStorage.getItem("language") || "";
+            const newLang = currentLang === "" ? "en" : "";
+            setLanguage(newLang);
+        });
+    </script>
 </body>
 </html>

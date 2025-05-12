@@ -41,6 +41,7 @@ nav {
     list-style: none;
     justify-content: space-between;
     gap: 1rem;
+    
 }
 
 .nav-link {
@@ -132,11 +133,6 @@ nav {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 2rem;
     border-radius: 10px;
-    align-items: center;
-}
-
-.toggle-icons {
-    display: flex;
     align-items: center;
 }
 
@@ -490,14 +486,6 @@ footer {
     color: white;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-
-}
-
 .info-text {
     padding: 1rem;
 }
@@ -546,28 +534,16 @@ footer {
     padding: 1rem;
   }
 
-  .link-about, .link-project {
+  .link-about, .link-project, .link-contact {
     color: #ffffff;
     text-decoration: none;
     padding: 1rem;
-    background-color: #ff4d00;
+    background-color: #02370d;
     border-radius: 8px;
   }
 
-  .link-about:hover, .link-project:hover {
-    background-color: #092901;
-}
-
-.link-contact {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 1rem;
-    background-color: #ff4d00;
-    border-radius: 8px;
-}
-
-.link-contact:hover {
-    background-color: #092901;
+  .link-about:hover, .link-project:hover, .link-contact:hover {
+    background-color: #ff6d40;
 }
 
 .project-text {
@@ -589,7 +565,7 @@ footer {
 }
 
 body.dark-mode {
-    background: #272727;
+    background: rgb(45, 45, 47);
     color: #e0e0e0;
 }
 
@@ -601,6 +577,7 @@ body.dark-mode .form {
     background: rgba(30, 30, 30, 0.9);
     color: #e0e0e0;
 }
+
 
 /* Dold standardstil för element */
 .hidden {
@@ -645,6 +622,12 @@ body.dark-mode .form {
     animation-name: slideInRight;
   }
   
+  .toggle-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
   @keyframes slideInRight {
     to {
       opacity: 1;
@@ -687,6 +670,12 @@ body.dark-mode .form {
 @media (max-width: 600px) {
     .menu-toggle {
         display: flex;
+    }
+
+    .toggle-icons {
+        display: flex;
+        flex-direction: column-reverse;
+        
     }
 
     .nav-links {
