@@ -79,7 +79,7 @@
 
     <script src="scripts.js"></script>
     <script>
-const themeToggle = document.getElementById("lightmode-icon");
+        const themeToggle = document.getElementById("lightmode-icon");
         const savedTheme = localStorage.getItem("theme") || "light"; // Standard: ljust läge
 
         // Ställ in tema vid laddning
@@ -105,14 +105,16 @@ const themeToggle = document.getElementById("lightmode-icon");
         const languageBtn = document.getElementById("language-btn");
 
         function setLanguage(lang) {
-            const translatableElements = document.querySelectorAll("[data-sv][data-en]");
+            const translatableElements = document.querySelectorAll("[data-sv][data-en], [data-sv-placeholder][data-en-placeholder]");
             translatableElements.forEach(el => {
                 if (el.placeholder !== undefined) {
+                    // Uppdatera placeholder
                     const translatedPlaceholder = el.getAttribute(`data-${lang}-placeholder`);
                     if (translatedPlaceholder) {
                         el.placeholder = translatedPlaceholder;
                     }
                 } else {
+                    // Uppdatera textinnehåll
                     const translation = el.getAttribute(`data-${lang}`);
                     if (translation) {
                         el.textContent = translation;
