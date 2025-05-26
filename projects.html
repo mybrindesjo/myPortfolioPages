@@ -18,10 +18,10 @@
                 <span class="bar"></span>
             </div>
             <ul class="nav-links">
-                <li><a class="nav-link" href="index.html">Hem</a></li>
-                <li><a class="nav-link" href="about.html">Om mig</a></li>
-                <li><a class="nav-link" href="projects.html">Projekt</a></li>
-                <li><a class="nav-link" href="contact.html">Kontakt</a></li>
+                <li><a class="nav-link" href="index.html" id="nav-home">Hem</a></li>
+                <li><a class="nav-link" href="about.html" id="nav-about">Om mig</a></li>
+                <li><a class="nav-link" href="projects.html" id="nav-project">Projekt</a></li>
+                <li><a class="nav-link" href="contact.html" id="nav-contact">Kontakt</a></li>
             </ul>
             <section class="toggle-icons">
                 <div class="themmode-toggle">
@@ -86,15 +86,27 @@ const themeToggle = document.getElementById("lightmode-icon");
 
         const translations = {
             sv: {
-                projectsTitle: "Mina projekt"
+                projectsTitle: "Mina projekt",
+                navHome: "Hem",
+                navAbout: "Om mig",
+                navProject: "Projekt",
+                navContact: "Kontakt"
             },
             en: {
-                projectsTitle: "My Projects"
+                projectsTitle: "My Projects",
+                navHome: "Home",
+                navAbout: "About",
+                navProject: "Project",
+                navContact: "Contact"
             }
         };
 
         const elementsToTranslate = {
-            projectsTitle: document.getElementById("projects-title")
+            projectsTitle: document.getElementById("projects-title"),
+            navHome: document.getElementById("nav-home"),
+            navAbout: document.getElementById("nav-about"),
+            navProject: document.getElementById("nav-project"),
+            navContact: document.getElementById("nav-contact")
         };
 
         function setLanguage(lang) {
