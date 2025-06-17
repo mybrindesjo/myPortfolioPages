@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Brindesjö</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/profilePicture.jpg" type="image/x-icon">
+    <link rel="icon" href="IMG/Me/profilePicture.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -25,7 +25,7 @@
             </ul>
             <section class="toggle-icons">
                 <div class="themmode-toggle">
-                    <img src="img/lightmode.png" alt="Light Mode" id="lightmode-icon">
+                    <img src="IMG/System/lightmode.png" alt="Light Mode" id="lightmode-icon">
                 </div>
                 <div class="language-toggle">
                     <button id="language-btn">🇬🇧</button>
@@ -36,7 +36,7 @@
 
     <main>
         <section class="intro-card hidden">
-            <img class="me-picture" src="img/my.jpeg" alt="me-picture" width="600" height="400">
+            <img class="me-picture" src="IMG/Me/my.jpeg" alt="me-picture" width="600" height="400">
             <div class="media-column">
                 <h1>Vem är jag?</h1>
                 <h2>Frontendutvecklare och UX/UI-designer, bred erfarenhet och starkt driv!</h2>       
@@ -50,7 +50,7 @@
             <section class="info-container hidden">
                 <h2 data-translate="education">Utbildning</h2>
                 <article class="info-card hidden">
-                    <img src="img/chasacademy.jpeg" alt="Chas Academy"> 
+                    <img src="IMG/CompanyLogo/chasacademy.jpeg" alt="Chas Academy"> 
                     <div class="info-text">
                         <h3>Chas Academy</h3>
                         <p>UX/UI-designer och frontendutveckling</p>
@@ -70,7 +70,7 @@
                 </article>
 
                 <article class="info-card hidden">
-                    <img src="img/sodra.png" alt="High School"> 
+                    <img src="IMG/CompanyLogo/sodra.png" alt="High School"> 
                     <div class="info-text">
                         <h3>Södra Stockholms folkhögskola</h3>
                         <p>Gymnasieutbildning</p>
@@ -79,7 +79,7 @@
                 </article>
 
                 <article class="info-card hidden">
-                    <img src="img/bollerup.png" alt="Bollerup"> 
+                    <img src="IMG/CompanyLogo/bollerup.png" alt="Bollerup"> 
                     <div class="info-text">                
                         <h3>Bollerups naturbruksgymnasium</h3>
                         <p>Samhällskunskap med inriktning häst</p>
@@ -91,7 +91,7 @@
             <section class="info-container hidden">
                 <h2 data-translate="work_experience">Arbetslivserfarenhet</h2>
                 <article class="info-card hidden">
-                    <img src="img/skansen_logo.jpeg" alt="skansen_logo" width="100" height="100">
+                    <img src="IMG/CompanyLogo/skansen.jpeg" alt="skansen_logo" width="100" height="100">
                     <div class="info-text">
                         <h3>Skansen</h3>
                         <p>Lokalvårdare</p>
@@ -100,7 +100,7 @@
                 </article>
 
                 <article class="info-card hidden">
-                    <img src="img/strangnaskommun.png" alt="strangnaskommun_logo">
+                    <img src="IMG/CompanyLogo/strangnaskommun.png" alt="strangnaskommun_logo">
                     <div class="info-text">
                         <h3>Strängnäs kommun</h3>
                         <p>Vårdbiträde</p>
@@ -109,7 +109,7 @@
                 </article>
 
                 <article class="info-card hidden">
-                    <img src="img/bollerup.png" alt="bollerups_logo">
+                    <img src="IMG/CompanyLogo/bollerup.png" alt="bollerups_logo">
                     <div class="info-text">                
                         <h3>Bollerups naturbruksgymnasium</h3>
                         <p>Hästskötare</p>
@@ -218,7 +218,7 @@
 
         // Ställ in tema vid laddning
         document.body.classList.add(savedTheme + "-mode");
-        themeToggle.src = savedTheme === "light" ? "img/darkmode.png" : "img/lightmode.png"; // Byt till rätt ikon
+        themeToggle.src = savedTheme === "light" ? "IMG/System/darkmode.png" : "IMG/System/lightmode.png"; // Byt till rätt ikon
 
         // Toggla mellan mörkt och ljust läge
         themeToggle.addEventListener("click", () => {
@@ -230,7 +230,7 @@
             document.body.classList.add(newTheme + "-mode");
             
             // Uppdatera ikon
-            themeToggle.src = newTheme === "light" ? "img/darkmode.png" : "img/lightmode.png"; // Byt till rätt ikon
+            themeToggle.src = newTheme === "light" ? "IMG/System/darkmode.png" : "IMG/System/lightmode.png"; // Byt till rätt ikon
             
             // Spara tema i localStorage
             localStorage.setItem("theme", newTheme);

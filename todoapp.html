@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Brindesjö</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/profilePicture.jpg" type="image/x-icon">
+    <link rel="icon" href="IMG/Me/profilePicture.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -25,7 +25,7 @@
             </ul>
             <section class="toggle-icons">
                 <div class="themmode-toggle">
-                    <img src="img/lightmode.png" alt="Light Mode" id="lightmode-icon">
+                    <img src="IMG/System/lightmode.png" alt="Light Mode" id="lightmode-icon">
                 </div>
                 <div class="language-toggle">
                     <button id="language-btn">🇬🇧</button>
@@ -47,7 +47,7 @@
                 <h2>Design</h2>
                 <p class="project-text">Valet av färger bidrar till harmonisk användarupplevelse. Blått symboliserar fokus och pålitlighet, grönt signalerar bekräftelse och positiv förstärkning, medan rött används för att tydligt indikera åtgärder som att radera uppgifter. Tack vare dresponsiva designfungerar applika bra på mobil som på dator.</p>
             </div>
-                <img class="project-img hidden" src="img/todoappFarg.png" alt="color">
+                <img class="project-img hidden" src="IMG/TodoApp/color.png" alt="color">
         </article>
 
         <section class="project-card hidden">
@@ -64,10 +64,10 @@
                         <a href="https://mytodapp.netlify.app">Se sidan här</a>
                     </button>
                     <div class="media-wrap">
-                        <img class="project-img hidden" src="img/todoappPrototyp1.jpeg" alt="prototype1">
-                        <img class="project-img hidden" src="img/todoappPrototyp2.jpeg" alt="prototype2">
-                        <img class="project-img hidden" src="img/todoappPrototyp3.jpeg" alt="prototype3">
-                        <img class="project-img hidden" src="img/todoappPrototyp4.jpeg" alt="prototype4">
+                        <img class="project-img hidden" src="IMG/TodoApp/photo1.jpeg" alt="prototype1">
+                        <img class="project-img hidden" src="IMG/TodoApp/photo2.jpeg" alt="prototype2">
+                        <img class="project-img hidden" src="IMG/TodoApp/photo3.jpeg" alt="prototype3">
+                        <img class="project-img hidden" src="IMG/TodoApp/photo4.jpeg" alt="prototype4">
                     </div>
                 </div>
             </div>
@@ -106,7 +106,7 @@ const themeToggle = document.getElementById("lightmode-icon");
 
         // Ställ in tema vid laddning
         document.body.classList.add(savedTheme + "-mode");
-        themeToggle.src = savedTheme === "light" ? "img/darkmode.png" : "img/lightmode.png"; // Byt till rätt ikon
+        themeToggle.src = savedTheme === "light" ? "IMG/System/darkmode.png" : "IMG/System/lightmode.png"; // Byt till rätt ikon
 
         // Toggla mellan mörkt och ljust läge
         themeToggle.addEventListener("click", () => {
@@ -118,7 +118,7 @@ const themeToggle = document.getElementById("lightmode-icon");
             document.body.classList.add(newTheme + "-mode");
             
             // Uppdatera ikon
-            themeToggle.src = newTheme === "light" ? "img/darkmode.png" : "img/lightmode.png"; // Byt till rätt ikon
+            themeToggle.src = newTheme === "light" ? "IMG/System/darkmode.png" : "IMG/System/lightmode.png"; // Byt till rätt ikon
             
             // Spara tema i localStorage
             localStorage.setItem("theme", newTheme);

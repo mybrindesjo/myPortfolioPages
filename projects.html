@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Brindesjö</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/profilePicture.jpg" type="image/x-icon">
+    <link rel="icon" href="IMG/Me/profilePicture.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -25,7 +25,7 @@
             </ul>
             <section class="toggle-icons">
                 <div class="themmode-toggle">
-                    <img src="img/lightmode.png" alt="Light Mode" id="lightmode-icon">
+                    <img src="IMG/System/lightmode.png" alt="Light Mode" id="lightmode-icon">
                 </div>
                 <div class="language-toggle">
                     <button id="language-btn">🇬🇧</button>
@@ -40,13 +40,16 @@
             <div class="project-cards-wrapper">
                 <article class="project-info">
                     <a href="stalltid.html">
-                        <img class="project-img" src="img/stalltid.png" alt="stalltid" width="300" height="200">
+                        <img class="project-img" src="IMG/Stalltid/logo.png" alt="stalltid" width="300" height="200">
                     </a>
                     <a href="todoapp.html">
-                        <img class="project-img" src="img/todoapp.png" alt="todoapp" width="300" height="200">
+                        <img class="project-img" src="IMG/Todoapp/logo.png" alt="todoapp" width="300" height="200">
                     </a>
                     <a href="firstportfolio.html">
-                        <img class="project-img" src="img/firstportfolio.png" alt="firstportfolio" width="300" height="200">
+                        <img class="project-img" src="IMG/Firstportfolio/logo.png" alt="firstportfolio" width="300" height="200">
+                    </a>
+                    <a href="buildboard.html">
+                        <img class="project-img" src="IMG/Buildboard/logo.png" alt="buildboard" width="300" height="200">
                     </a>
                 </article>
             </div>
@@ -63,7 +66,7 @@ const themeToggle = document.getElementById("lightmode-icon");
 
         // Ställ in tema vid laddning
         document.body.classList.add(savedTheme + "-mode");
-        themeToggle.src = savedTheme === "light" ? "img/darkmode.png" : "img/lightmode.png"; // Byt till rätt ikon
+        themeToggle.src = savedTheme === "light" ? "IMG/System/darkmode.png" : "IMG/System/lightmode.png"; // Byt till rätt ikon
 
         // Toggla mellan mörkt och ljust läge
         themeToggle.addEventListener("click", () => {
@@ -75,7 +78,7 @@ const themeToggle = document.getElementById("lightmode-icon");
             document.body.classList.add(newTheme + "-mode");
             
             // Uppdatera ikon
-            themeToggle.src = newTheme === "light" ? "img/darkmode.png" : "img/lightmode.png"; // Byt till rätt ikon
+            themeToggle.src = newTheme === "light" ? "IMG/System/darkmode.png" : "IMG/System/lightmode.png"; // Byt till rätt ikon
             
             // Spara tema i localStorage
             localStorage.setItem("theme", newTheme);

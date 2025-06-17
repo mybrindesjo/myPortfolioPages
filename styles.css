@@ -9,7 +9,7 @@
 body {
 /*     font-family: 'Fira Code', monospace; */ 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
-    background: url('img/backgrund.jpg') no-repeat center center/cover;
+    background: url('IMG/System/backgrund.jpg') no-repeat center center/cover;
     color: white;
     display: flex;
     flex-direction: column;

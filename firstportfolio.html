@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Brindesjö</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/profilePicture.jpg" type="image/x-icon">
+    <link rel="icon" href="IMG/Me/profilePicture.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -25,7 +25,7 @@
             </ul>
             <section class="toggle-icons">
                 <div class="themmode-toggle">
-                    <img src="img/darkmode.png" alt="Dark Mode" id="theme-toggle-icon">
+                    <img src="IMG/System/darkmode.png" alt="Dark Mode" id="theme-toggle-icon">
                 </div>
                 <div class="language-toggle">
                     <button id="language-btn">🇬🇧</button>
@@ -47,7 +47,7 @@
                 <h2>Design</h2>
                 <p class="project-text">Val av färger; kontrast, enkelhet och harmoni. Grönt symboliserar natur och balans. Vitt står för enkelhet och tydlighet. Orange tillför energi och värme. Bilderna speglar min spralliga personlighet och passion för hästar. Det ger portfolion unik identitet och med sin responsiva design passar portfolion lika bra på mobil som dator.</p>
             </div>
-                <img class="project-img hidden" src="img/firstportfolioFarg.png" alt="color">
+                <img class="project-img hidden" src="IMG/FirstPortfolio/color.png" alt="color">
         </article>
 
         <section class="project-card hidden">
@@ -64,10 +64,10 @@
                         <a href="https://mybrindesjo.github.io/myFirstPortfolio/">Se sidan här</a>
                     </button>
                     <div class="media-wrap">
-                        <img class="project-img hidden" src="img/firstportfolioPrototyp1.png" alt="prototype1">
-                        <img class="project-img hidden" src="img/firstportfolioPrototyp2.png" alt="prototype2">
-                        <img class="project-img hidden" src="img/firstportfolioPrototyp3.png" alt="prototype3">
-                        <img class="project-img hidden" src="img/firstportfolioPrototyp4.png" alt="prototype4">
+                        <img class="project-img hidden" src="IMG/FirstPortfolio/photo1.png" alt="prototype1">
+                        <img class="project-img hidden" src="IMG/FirstPortfolio/photo2.png" alt="prototype2">
+                        <img class="project-img hidden" src="IMG/FirstPortfolio/photo3.png" alt="prototype3">
+                        <img class="project-img hidden" src="IMG/FirstPortfolio/photo4.png" alt="prototype4">
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
     // Hantera tema
     const savedTheme = localStorage.getItem("theme") || "light";
     document.body.classList.add(savedTheme + "-mode");
-    themeToggle.src = savedTheme === "light" ? "img/darkmode.png" : "img/lightmode.png";
+    themeToggle.src = savedTheme === "light" ? "IMG/System/darkmode.png" : "IMG/System/lightmode.png";
 
     themeToggle.addEventListener("click", () => {
         const currentTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
@@ -115,7 +115,7 @@
 
         themeToggle.style.opacity = 0;
         setTimeout(() => {
-            themeToggle.src = newTheme === "light" ? "img/darkmode.png" : "img/lightmode.png";
+            themeToggle.src = newTheme === "light" ? "IMG/System/darkmode.png" : "IMG/System/lightmode.png";
             themeToggle.style.opacity = 1;
         }, 200);
 
