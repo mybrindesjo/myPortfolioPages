@@ -139,7 +139,7 @@ const themeToggle = document.getElementById("lightmode-icon");
                 intro: "Buildboard är ett interaktivt och responsivt webbverktyg som är designat för att stärka samarbete och självledarskap inom team. Syftet är att göra teamutveckling mer tillgänglig, engagerande och kontinuerlig – både digitalt och fysiskt.",
                 projectTitle1: "Skiss och planering",
                 projectText1: "Arbetet inleddes med användartester och low-fidelity-skisser för att utforska idéer och förstå användarnas behov. Därefter togs mid-fidelity-skisser fram, som testades och itererades baserat på feedback. Processen avslutades med en hi-fi-prototyp i Figma.",
-                projectText2: "Planeringen började med wireframes i Figma för att skapa en tydlig överblick över appens struktur, layout och funktionalitet. Fokus låg på att skapa en enkel och intuitiv navigering för att underlätta användarens resa genom appen.",
+                planningText: "Planeringen började med wireframes i Figma för att skapa en tydlig överblick över appens struktur, layout och funktionalitet. Fokus låg på att skapa en enkel och intuitiv navigering för att underlätta användarens resa genom appen.",
                 projectTitle2: "Design",
                 projectText2: "Ett färg- och typografi-moodboard för att hitta rätt känsla för appen. Mjuka, stilrena färger och lättlästa typsnitt för att skapa inbjudande och harmonisk känsla.",
                 skillsTitle: "Kompetenser"
@@ -166,9 +166,10 @@ const themeToggle = document.getElementById("lightmode-icon");
             contact: document.querySelector("a[href='contact.html']"),
             intro: document.querySelector(".intro-card p"),
             projectTitle1: document.querySelectorAll(".project-header h2")[0],
-            projectText1: document.querySelectorAll(".project-card p")[0],
+            projectText1: document.querySelectorAll(".project-header p")[0],
+            planningText: document.querySelectorAll(".project-header p")[1],
             projectTitle2: document.querySelectorAll(".project-header h2")[1],
-            projectText2: document.querySelectorAll(".project-card p")[1],
+            projectText2: document.querySelectorAll(".project-header p")[2],
             skillsTitle: document.querySelector(".info-container h2")
         };
 
