@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Brindesjö</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/Me/profilePicture.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="index.html">Hem</a></li>
+                <li><a class="nav-link" href="about.html">Om mig</a></li>
+                <li><a class="nav-link" href="projects.html">Projekt</a></li>
+                <li><a class="nav-link" href="contact.html">Kontakt</a></li>
+            </ul>
+            <section class="toggle-icons">
+                <div class="themmode-toggle">
+                    <img src="IMG/System/lightmode.png" alt="Light Mode" id="lightmode-icon">
+                </div>
+                <div class="language-toggle">
+                    <button id="language-btn">🇬🇧</button>
+                </div>
+            </section>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="intro-card">
+            <div class="media-column">
+                <h1>MiniMart</h1>
+                <p>text</p>
+            </div>
+        </section>
+            
+        <section class="project-container-row">
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>Skiss och planering</h2>
+                    <p>text</p>
+                 </div>
+                    <img class="project-img" src="img/MiniMart/sketch.png" alt="skiss">
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>Design</h2>
+                    <p>text</p>
+                </div>
+                <img class="project-img" src="img/MiniMart/color.png" alt="color">
+            </article>
+        </section>
+
+        <section class="project-card">
+            <div class="project-header">
+                <h2>Prototyp</h2>
+            </div>
+                <div class="project hidden">
+                    <div class="row">
+                        <h3>MiniMart</h3>
+                        <button class="toggle-btn">+</button>
+                    </div>
+                <div class="project-details" style="display: none;">
+                    <div class="media-wrap">
+                        <p>text</p>
+                        <button class="project-btn">
+                            <a href="https://www.figma.com/proto/cFL0eoW7QybS4o2u7VCdPo/My-Brindesj%C3%B6---VG-uppgift--Copy-?node-id=28-11209&t=s0hpPlc9p4N1rRH8-1" target="_blank">Se prototypen här</a>
+                        </button>
+                            <img class="project-img hidden" src="IMG/MiniMart/photo1.png" alt="">
+                            <img class="project-img hidden" src="IMG/MiniMart/photo2.png" alt="">
+                            <img class="project-img hidden" src="IMG/MiniMart/photo3.png" alt="">
+                    </div>
+                </div>
+    </section>
+
+        <section class="info-container">
+            <h2>Kompetenser</h2>
+            <ul class="skills">
+                <li>text</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Brindesjö. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+const themeToggle = document.getElementById("lightmode-icon");
+        const savedTheme = localStorage.getItem("theme") || "light"; // Standard: ljust läge
+
+        // Ställ in tema vid laddning
+        document.body.classList.add(savedTheme + "-mode");
+        themeToggle.src = savedTheme === "light" ? "IMG/System/darkmode.png" : "IMG/System/lightmode.png"; // Byt till rätt ikon
+
+        // Toggla mellan mörkt och ljust läge
+        themeToggle.addEventListener("click", () => {
+            const currentTheme = document.body.classList.contains("light-mode") ? "light" : "dark";
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+            
+            // Byt tema
+            document.body.classList.remove(currentTheme + "-mode");
+            document.body.classList.add(newTheme + "-mode");
+            
+            // Uppdatera ikon
+            themeToggle.src = newTheme === "light" ? "IMG/System/darkmode.png" : "IMG/System/lightmode.png"; // Byt till rätt ikon
+            
+            // Spara tema i localStorage
+            localStorage.setItem("theme", newTheme);
+        });
+
+
+        const translations = {
+            sv: {
+                home: "Hem",
+                about: "Om mig",
+                projects: "Projekt",
+                contact: "Kontakt",
+                intro: "",
+                projectTitle1: "Skiss och planering",
+                projectText1: "",
+                projectTitle2: "Design",
+                projectText2: "",
+                skillsTitle: "Kompetenser"
+            },
+            en: {
+                home: "Home",
+                about: "About me",
+                projects: "Projects",
+                contact: "Contact",
+                intro: "",
+                projectTitle1: "Sketch and Planning",
+                projectText1: "",
+                projectTitle2: "Design",
+                projectText2: "",
+                skillsTitle: "Skills"
+            }
+        };
+
+        const languageBtn = document.getElementById("language-btn");
+        const elementsToTranslate = {
+            home: document.querySelector("a[href='index.html']"),
+            about: document.querySelector("a[href='about.html']"),
+            projects: document.querySelector("a[href='projects.html']"),
+            contact: document.querySelector("a[href='contact.html']"),
+            intro: document.querySelector(".intro-card p"),
+            projectTitle1: document.querySelectorAll(".project-header h2")[0],
+            projectText1: document.querySelectorAll(".project-header p")[0],
+            projectTitle2: document.querySelectorAll(".project-header h2")[1],
+            projectText2: document.querySelectorAll(".project-header p")[2],
+            skillsTitle: document.querySelector(".info-container h2")
+        };
+
+        function setLanguage(lang) {
+            const translation = translations[lang];
+            Object.keys(elementsToTranslate).forEach(key => {
+                const element = elementsToTranslate[key];
+                if (element) {
+                    element.textContent = translation[key];
+                }
+            });
+            localStorage.setItem("language", lang);
+
+            // Uppdatera knappens innehåll och flagga
+            languageBtn.innerHTML = lang === "sv"
+                ? `🇬🇧`
+                : `🇸🇪`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedLanguage = localStorage.getItem("language") || "sv";
+            setLanguage(savedLanguage);
+        });
+
+        languageBtn.addEventListener("click", () => {
+            const currentLang = localStorage.getItem("language") || "sv";
+            const newLang = currentLang === "sv" ? "en" : "sv";
+            setLanguage(newLang);
+        });
+    </script>
+</body>
+</html>
+
