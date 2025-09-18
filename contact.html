@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-sv="My Brindesjö" data-en="My Brindesjö">My Brindesjö</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="IMG/Me/profilePicture.jpg" type="image/x-icon">
+    <link rel="icon" href="IMG/Me/profilePicture.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
@@ -34,28 +34,31 @@
         </nav>
     </header>
 
-    <main>
-        <section class="intro hidden">
-            <h1 data-sv="Kontakta mig" data-en="Contact Me">Kontakta mig</h1>
-            <p data-sv="Jag är alltid öppför nya möjligheter och samarbeten. Om du har några frågor eller vill diskutera ett projekt, tveka inte att höra av dig!"
-               data-en="I am always opto new opportunities and collaborations. If you have any questions or want to discuss a project, feel free to reach out!">
-               Jag är alltid öppför nya möjligheter och samarbeten...
-            </p>
-
-            <div class="social-links hidden">
-                <a href="mailto:my.brindesjo@gmail.com">
-                    <img src="IMG/CompanyLogo/gmail.png" alt="Gmail" class="social-img" width="50" height="50">
-                </a>
-                <a href="https://github.com/mybrindesjo?tab=repositories" target="_blank">
-                    <img src="IMG/CompanyLogo/github.png" alt="Github" class="social-img" width="50" height="50">
-                </a>
-                <a href="https://www.linkedin.com/in/mybrindesjo/" target="_blank">
-                    <img src="IMG/CompanyLogo/linkedin.png" alt="LinkedIn" class="social-img" width="50" height="50">
-                </a>
-            </div>
-
-            <form class="contact-form hidden" method="POST" data-netlify="true" name="contact">
+    <main class="row-layout">
+        <div class="intro-contact">
+            <section class="intro hidden">
                 <h1 data-sv="Kontakta mig" data-en="Contact Me">Kontakta mig</h1>
+                <p data-sv="Jag är alltid öppför nya möjligheter och samarbeten. Om du har några frågor eller vill diskutera ett projekt, tveka inte att höra av dig!"
+                   data-en="I am always opto new opportunities and collaborations. If you have any questions or want to discuss a project, feel free to reach out!">
+                   Jag är alltid öppför nya möjligheter och samarbeten...
+                </p>
+    
+                <div class="social-links">
+                    <a class="social-container" href="mailto:my.brindesjo@gmail.com">
+                        <img src="IMG/CompanyLogo/gmail.png" alt="Gmail" class="social-img" width="50" height="50">
+                        <p>Gmail</p>
+                    </a>
+                    <a class="social-container" href="https://github.com/mybrindesjo?tab=repositories" target="_blank">
+                        <img src="IMG/CompanyLogo/github.png" alt="Github" class="social-img" width="50" height="50">
+                        <p>GitHub</p>
+                    </a>
+                    <a class="social-container" href="https://www.linkedin.com/in/mybrindesjo/" target="_blank">
+                        <img src="IMG/CompanyLogo/linkedin.png" alt="LinkedIn" class="social-img" width="50" height="50">
+                        <p>LinkedIn</p>
+                    </a>
+                </div>
+            </div>
+            <form class="contact-form hidden" method="POST" data-netlify="true" name="contact">
                 
                 <label for="name" data-sv="Namn:" data-en="Name:">Namn:</label>
                 <input id="name" name="name" type="text" required placeholder="Ditt namn" data-sv-placeholder="Ditt namn" data-en-placeholder="Your name">
